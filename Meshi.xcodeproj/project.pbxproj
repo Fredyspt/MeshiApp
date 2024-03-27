@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
+		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
+		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
+		482737852BB0E8AC00CD00CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737842BB0E8AC00CD00CF /* Preview Assets.xcassets */; };
+		4827378F2BB0E8AC00CD00CF /* MeshiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827378E2BB0E8AC00CD00CF /* MeshiTests.swift */; };
+		482737992BB0E8AC00CD00CF /* MeshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737982BB0E8AC00CD00CF /* MeshiUITests.swift */; };
+		4827379B2BB0E8AC00CD00CF /* MeshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827379A2BB0E8AC00CD00CF /* MeshiUITestsLaunchTests.swift */; };
+		482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737AC2BB0EA2400CD00CF /* HomeView.swift */; };
+		482737AF2BB0EA2E00CD00CF /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737AE2BB0EA2E00CD00CF /* RecipesView.swift */; };
+		482737B12BB0EA4800CD00CF /* NewMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B02BB0EA4800CD00CF /* NewMealView.swift */; };
+		482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B22BB0EA5A00CD00CF /* CalendarView.swift */; };
+		482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B42BB0EA6400CD00CF /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4827378B2BB0E8AC00CD00CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 482737722BB0E8AB00CD00CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 482737792BB0E8AB00CD00CF;
+			remoteInfo = Meshi;
+		};
+		482737952BB0E8AC00CD00CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 482737722BB0E8AB00CD00CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 482737792BB0E8AB00CD00CF;
+			remoteInfo = Meshi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
+		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		482737812BB0E8AC00CD00CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		482737842BB0E8AC00CD00CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4827378A2BB0E8AC00CD00CF /* MeshiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4827378E2BB0E8AC00CD00CF /* MeshiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiTests.swift; sourceTree = "<group>"; };
+		482737942BB0E8AC00CD00CF /* MeshiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		482737982BB0E8AC00CD00CF /* MeshiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiUITests.swift; sourceTree = "<group>"; };
+		4827379A2BB0E8AC00CD00CF /* MeshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		482737AC2BB0EA2400CD00CF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		482737AE2BB0EA2E00CD00CF /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		482737B02BB0EA4800CD00CF /* NewMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMealView.swift; sourceTree = "<group>"; };
+		482737B22BB0EA5A00CD00CF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		482737B42BB0EA6400CD00CF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		482737772BB0E8AB00CD00CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737872BB0E8AC00CD00CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737912BB0E8AC00CD00CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		482737712BB0E8AB00CD00CF = {
+			isa = PBXGroup;
+			children = (
+				4827377C2BB0E8AB00CD00CF /* Meshi */,
+				4827378D2BB0E8AC00CD00CF /* MeshiTests */,
+				482737972BB0E8AC00CD00CF /* MeshiUITests */,
+				4827377B2BB0E8AB00CD00CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4827377B2BB0E8AB00CD00CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4827377A2BB0E8AB00CD00CF /* Meshi.app */,
+				4827378A2BB0E8AC00CD00CF /* MeshiTests.xctest */,
+				482737942BB0E8AC00CD00CF /* MeshiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4827377C2BB0E8AB00CD00CF /* Meshi */ = {
+			isa = PBXGroup;
+			children = (
+				482737A72BB0E9D700CD00CF /* Views */,
+				4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */,
+				4827377F2BB0E8AB00CD00CF /* ContentView.swift */,
+				482737812BB0E8AC00CD00CF /* Assets.xcassets */,
+				482737832BB0E8AC00CD00CF /* Preview Content */,
+			);
+			path = Meshi;
+			sourceTree = "<group>";
+		};
+		482737832BB0E8AC00CD00CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				482737842BB0E8AC00CD00CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4827378D2BB0E8AC00CD00CF /* MeshiTests */ = {
+			isa = PBXGroup;
+			children = (
+				4827378E2BB0E8AC00CD00CF /* MeshiTests.swift */,
+			);
+			path = MeshiTests;
+			sourceTree = "<group>";
+		};
+		482737972BB0E8AC00CD00CF /* MeshiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				482737982BB0E8AC00CD00CF /* MeshiUITests.swift */,
+				4827379A2BB0E8AC00CD00CF /* MeshiUITestsLaunchTests.swift */,
+			);
+			path = MeshiUITests;
+			sourceTree = "<group>";
+		};
+		482737A72BB0E9D700CD00CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				482737AC2BB0EA2400CD00CF /* HomeView.swift */,
+				482737AE2BB0EA2E00CD00CF /* RecipesView.swift */,
+				482737B02BB0EA4800CD00CF /* NewMealView.swift */,
+				482737B22BB0EA5A00CD00CF /* CalendarView.swift */,
+				482737B42BB0EA6400CD00CF /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		482737792BB0E8AB00CD00CF /* Meshi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4827379E2BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "Meshi" */;
+			buildPhases = (
+				482737762BB0E8AB00CD00CF /* Sources */,
+				482737772BB0E8AB00CD00CF /* Frameworks */,
+				482737782BB0E8AB00CD00CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Meshi;
+			productName = Meshi;
+			productReference = 4827377A2BB0E8AB00CD00CF /* Meshi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		482737892BB0E8AC00CD00CF /* MeshiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482737A12BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "MeshiTests" */;
+			buildPhases = (
+				482737862BB0E8AC00CD00CF /* Sources */,
+				482737872BB0E8AC00CD00CF /* Frameworks */,
+				482737882BB0E8AC00CD00CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4827378C2BB0E8AC00CD00CF /* PBXTargetDependency */,
+			);
+			name = MeshiTests;
+			productName = MeshiTests;
+			productReference = 4827378A2BB0E8AC00CD00CF /* MeshiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		482737932BB0E8AC00CD00CF /* MeshiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482737A42BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "MeshiUITests" */;
+			buildPhases = (
+				482737902BB0E8AC00CD00CF /* Sources */,
+				482737912BB0E8AC00CD00CF /* Frameworks */,
+				482737922BB0E8AC00CD00CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				482737962BB0E8AC00CD00CF /* PBXTargetDependency */,
+			);
+			name = MeshiUITests;
+			productName = MeshiUITests;
+			productReference = 482737942BB0E8AC00CD00CF /* MeshiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		482737722BB0E8AB00CD00CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					482737792BB0E8AB00CD00CF = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					482737892BB0E8AC00CD00CF = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 482737792BB0E8AB00CD00CF;
+					};
+					482737932BB0E8AC00CD00CF = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 482737792BB0E8AB00CD00CF;
+					};
+				};
+			};
+			buildConfigurationList = 482737752BB0E8AB00CD00CF /* Build configuration list for PBXProject "Meshi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 482737712BB0E8AB00CD00CF;
+			productRefGroup = 4827377B2BB0E8AB00CD00CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				482737792BB0E8AB00CD00CF /* Meshi */,
+				482737892BB0E8AC00CD00CF /* MeshiTests */,
+				482737932BB0E8AC00CD00CF /* MeshiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		482737782BB0E8AB00CD00CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482737852BB0E8AC00CD00CF /* Preview Assets.xcassets in Resources */,
+				482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737882BB0E8AC00CD00CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737922BB0E8AC00CD00CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		482737762BB0E8AB00CD00CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */,
+				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
+				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,
+				482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */,
+				4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */,
+				482737B12BB0EA4800CD00CF /* NewMealView.swift in Sources */,
+				482737AF2BB0EA2E00CD00CF /* RecipesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737862BB0E8AC00CD00CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4827378F2BB0E8AC00CD00CF /* MeshiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482737902BB0E8AC00CD00CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482737992BB0E8AC00CD00CF /* MeshiUITests.swift in Sources */,
+				4827379B2BB0E8AC00CD00CF /* MeshiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4827378C2BB0E8AC00CD00CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 482737792BB0E8AB00CD00CF /* Meshi */;
+			targetProxy = 4827378B2BB0E8AC00CD00CF /* PBXContainerItemProxy */;
+		};
+		482737962BB0E8AC00CD00CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 482737792BB0E8AB00CD00CF /* Meshi */;
+			targetProxy = 482737952BB0E8AC00CD00CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4827379C2BB0E8AC00CD00CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4827379D2BB0E8AC00CD00CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4827379F2BB0E8AC00CD00CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meshi/Preview Content\"";
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Meshi - Meal Planner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.Meshi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		482737A02BB0E8AC00CD00CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meshi/Preview Content\"";
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Meshi - Meal Planner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.Meshi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		482737A22BB0E8AC00CD00CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.MeshiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meshi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meshi";
+			};
+			name = Debug;
+		};
+		482737A32BB0E8AC00CD00CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.MeshiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meshi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meshi";
+			};
+			name = Release;
+		};
+		482737A52BB0E8AC00CD00CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.MeshiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Meshi;
+			};
+			name = Debug;
+		};
+		482737A62BB0E8AC00CD00CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23CKY3F7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fredyspt.MeshiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Meshi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		482737752BB0E8AB00CD00CF /* Build configuration list for PBXProject "Meshi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4827379C2BB0E8AC00CD00CF /* Debug */,
+				4827379D2BB0E8AC00CD00CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4827379E2BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "Meshi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4827379F2BB0E8AC00CD00CF /* Debug */,
+				482737A02BB0E8AC00CD00CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		482737A12BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "MeshiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482737A22BB0E8AC00CD00CF /* Debug */,
+				482737A32BB0E8AC00CD00CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		482737A42BB0E8AC00CD00CF /* Build configuration list for PBXNativeTarget "MeshiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482737A52BB0E8AC00CD00CF /* Debug */,
+				482737A62BB0E8AC00CD00CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 482737722BB0E8AB00CD00CF /* Project object */;
+}
