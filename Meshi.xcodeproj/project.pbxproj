@@ -11,6 +11,7 @@
 		481A0E792BB401B20067F2E1 /* MealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E782BB401B20067F2E1 /* MealTime.swift */; };
 		481A0E7B2BB402FB0067F2E1 /* MealTimeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E7A2BB402FB0067F2E1 /* MealTimeSectionView.swift */; };
 		481A0E7D2BB403470067F2E1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E7C2BB403470067F2E1 /* Meal.swift */; };
+		481A0E802BB774490067F2E1 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E7F2BB774490067F2E1 /* DesignSystem.swift */; };
 		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
 		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
 		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		481A0E782BB401B20067F2E1 /* MealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTime.swift; sourceTree = "<group>"; };
 		481A0E7A2BB402FB0067F2E1 /* MealTimeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeSectionView.swift; sourceTree = "<group>"; };
 		481A0E7C2BB403470067F2E1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		481A0E7F2BB774490067F2E1 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
 		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		481A0E7E2BB7742F0067F2E1 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				481A0E7F2BB774490067F2E1 /* DesignSystem.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		482737712BB0E8AB00CD00CF = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		4827377C2BB0E8AB00CD00CF /* Meshi */ = {
 			isa = PBXGroup;
 			children = (
+				481A0E7E2BB7742F0067F2E1 /* Design */,
 				481A0E772BB401030067F2E1 /* Models */,
 				482737A72BB0E9D700CD00CF /* Views */,
 				4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */,
@@ -308,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481A0E802BB774490067F2E1 /* DesignSystem.swift in Sources */,
 				482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */,
 				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
 				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,

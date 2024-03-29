@@ -15,7 +15,10 @@ struct MealView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
-                .font(.title3)
+                .font(.Meshi.title3)
+            
+            Text("This is a description")
+                .font(.Meshi.normal)
             
             if let image {
                 Image(uiImage: image)

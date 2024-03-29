@@ -21,14 +21,13 @@ struct HomeView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("My Meals")
-                        .bold()
-                        .font(.largeTitle)
+                        .font(.Meshi.largeTitle)
                     
                     Spacer()
                 }
                 
                 Text(today)
-                    .font(.title2)
+                    .font(.Meshi.title)
                     .padding(.bottom, 16)
                 
                 ForEach(MealTime.allCases) { mealTime in

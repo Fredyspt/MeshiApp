@@ -14,7 +14,7 @@ struct MealTimeSectionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(mealTime.rawValue)
-                .font(.title2)
+                .font(.Meshi.title2)
             
             ForEach(meals) { meal in
                 MealView(title: meal.name)
