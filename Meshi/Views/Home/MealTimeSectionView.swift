@@ -24,9 +24,9 @@ struct MealTimeSectionView: View {
     }
 }
 
-#Preview {
-    MealTimeSectionView(
-        mealTime: .breakfast,
-        meals: [.init(name: "Eggs")]
-    )
-}
+//#Preview {
+//    MealTimeSectionView(
+//        mealTime: .breakfast,
+//        meals: [.init(name: "Eggs")]
+//    )
+//}

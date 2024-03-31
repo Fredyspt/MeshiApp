@@ -34,7 +34,7 @@ struct HomeView: View {
                     MealTimeSectionView(
                         mealTime: mealTime,
                         meals: [
-                            .init(name: "Eggs")
+//                            .init(name: "Eggs")
                         ]
                     )
                 }
