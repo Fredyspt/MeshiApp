@@ -22,6 +22,7 @@
 		481A0E972BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8D2BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift */; };
 		481A0E982BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8E2BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift */; };
 		481A0E992BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8F2BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift */; };
+		481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0ED62BB8EA300067F2E1 /* Persistence.swift */; };
 		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
 		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
 		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		481A0E8D2BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		481A0E8E2BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		481A0E8F2BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0ED62BB8EA300067F2E1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
 		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				482737812BB0E8AC00CD00CF /* Assets.xcassets */,
 				482737832BB0E8AC00CD00CF /* Preview Content */,
 				481A0E832BB8DAF80067F2E1 /* Meshi.xcdatamodeld */,
+				481A0ED62BB8EA300067F2E1 /* Persistence.swift */,
 			);
 			path = Meshi;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				481A0E7B2BB402FB0067F2E1 /* MealTimeSectionView.swift in Sources */,
 				481A0E792BB401B20067F2E1 /* MealTime.swift in Sources */,
 				482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */,
+				481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */,
 				4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */,
 				482737B12BB0EA4800CD00CF /* NewMealView.swift in Sources */,
 				482737AF2BB0EA2E00CD00CF /* RecipesView.swift in Sources */,
