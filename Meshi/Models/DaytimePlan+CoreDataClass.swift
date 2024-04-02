@@ -1,5 +1,5 @@
 //
-//  Tag+CoreDataClass.swift
+//  DaytimePlan+CoreDataClass.swift
 //  Meshi
 //
 //  Created by Fredy Sanchez on 01/04/24.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Tag)
-public class Tag: NSManagedObject {
+@objc(DaytimePlan)
+public class DaytimePlan: NSManagedObject {
 
 }

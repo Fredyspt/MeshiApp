@@ -2,7 +2,7 @@
 //  Tag+CoreDataProperties.swift
 //  Meshi
 //
-//  Created by Fredy Sanchez on 30/03/24.
+//  Created by Fredy Sanchez on 01/04/24.
 //
 //
 
@@ -16,8 +16,8 @@ extension Tag {
         return NSFetchRequest<Tag>(entityName: "Tag")
     }
 
-    @NSManaged public var id: UUID
-    @NSManaged public var name: String
+    @NSManaged public var id: UUID?
+    @NSManaged public var name: String?
     @NSManaged public var meals: NSSet?
 
 }

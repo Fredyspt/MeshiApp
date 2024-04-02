@@ -6,18 +6,30 @@
         <attribute name="userDescription" optional="YES" attributeType="String"/>
         <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="collections" inverseEntity="Meal"/>
     </entity>
+    <entity name="DayPlan" representedClassName="DayPlan" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="daytimePlan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="mealPlan" inverseEntity="DaytimePlan"/>
+    </entity>
+    <entity name="DaytimePlan" representedClassName="DaytimePlan" syncable="YES">
+        <attribute name="dayTime" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="mealPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="daytimePlan" inverseEntity="DayPlan"/>
+        <relationship name="meals" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="daytimePlans" inverseEntity="Meal"/>
+    </entity>
     <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString="Unnamed Ingredient"/>
         <relationship name="mealIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealIngredient" inverseName="ingredient" inverseEntity="MealIngredient"/>
     </entity>
     <entity name="Meal" representedClassName="Meal" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary"/>
-        <attribute name="name" attributeType="String"/>
-        <attribute name="preparation" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString="Unnamed Meal"/>
+        <attribute name="preparation" attributeType="String" defaultValueString=""/>
         <attribute name="timeToCook" optional="YES" attributeType="String"/>
         <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Collection" inverseName="meals" inverseEntity="Collection"/>
+        <relationship name="daytimePlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="meals" inverseEntity="DaytimePlan"/>
         <relationship name="mealIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealIngredient" inverseName="meal" inverseEntity="MealIngredient"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="meals" inverseEntity="Tag"/>
     </entity>

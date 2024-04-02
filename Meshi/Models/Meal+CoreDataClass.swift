@@ -2,7 +2,7 @@
 //  Meal+CoreDataClass.swift
 //  Meshi
 //
-//  Created by Fredy Sanchez on 30/03/24.
+//  Created by Fredy Sanchez on 01/04/24.
 //
 //
 

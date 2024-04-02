@@ -2,7 +2,7 @@
 //  Meal+CoreDataProperties.swift
 //  Meshi
 //
-//  Created by Fredy Sanchez on 30/03/24.
+//  Created by Fredy Sanchez on 01/04/24.
 //
 //
 
@@ -16,31 +16,32 @@ extension Meal {
         return NSFetchRequest<Meal>(entityName: "Meal")
     }
 
-    @NSManaged public var id: UUID
-    @NSManaged public var name: String
-    @NSManaged public var preparation: String
+    @NSManaged public var id: UUID?
     @NSManaged public var imageData: Data?
+    @NSManaged public var name: String?
+    @NSManaged public var preparation: String?
     @NSManaged public var timeToCook: String?
-    @NSManaged public var tags: NSSet?
-    @NSManaged public var mealIngredients: NSSet?
     @NSManaged public var collections: NSSet?
+    @NSManaged public var mealIngredients: NSSet?
+    @NSManaged public var tags: NSSet?
+    @NSManaged public var daytimePlans: NSSet?
 
 }
 
-// MARK: Generated accessors for tags
+// MARK: Generated accessors for collections
 extension Meal {
 
-    @objc(addTagsObject:)
-    @NSManaged public func addToTags(_ value: Tag)
+    @objc(addCollectionsObject:)
+    @NSManaged public func addToCollections(_ value: Collection)
 
-    @objc(removeTagsObject:)
-    @NSManaged public func removeFromTags(_ value: Tag)
+    @objc(removeCollectionsObject:)
+    @NSManaged public func removeFromCollections(_ value: Collection)
 
-    @objc(addTags:)
-    @NSManaged public func addToTags(_ values: NSSet)
+    @objc(addCollections:)
+    @NSManaged public func addToCollections(_ values: NSSet)
 
-    @objc(removeTags:)
-    @NSManaged public func removeFromTags(_ values: NSSet)
+    @objc(removeCollections:)
+    @NSManaged public func removeFromCollections(_ values: NSSet)
 
 }
 
@@ -61,20 +62,37 @@ extension Meal {
 
 }
 
-// MARK: Generated accessors for collections
+// MARK: Generated accessors for tags
 extension Meal {
 
-    @objc(addCollectionsObject:)
-    @NSManaged public func addToCollections(_ value: Collection)
+    @objc(addTagsObject:)
+    @NSManaged public func addToTags(_ value: Tag)
 
-    @objc(removeCollectionsObject:)
-    @NSManaged public func removeFromCollections(_ value: Collection)
+    @objc(removeTagsObject:)
+    @NSManaged public func removeFromTags(_ value: Tag)
 
-    @objc(addCollections:)
-    @NSManaged public func addToCollections(_ values: NSSet)
+    @objc(addTags:)
+    @NSManaged public func addToTags(_ values: NSSet)
 
-    @objc(removeCollections:)
-    @NSManaged public func removeFromCollections(_ values: NSSet)
+    @objc(removeTags:)
+    @NSManaged public func removeFromTags(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for daytimePlans
+extension Meal {
+
+    @objc(addDaytimePlansObject:)
+    @NSManaged public func addToDaytimePlans(_ value: DaytimePlan)
+
+    @objc(removeDaytimePlansObject:)
+    @NSManaged public func removeFromDaytimePlans(_ value: DaytimePlan)
+
+    @objc(addDaytimePlans:)
+    @NSManaged public func addToDaytimePlans(_ values: NSSet)
+
+    @objc(removeDaytimePlans:)
+    @NSManaged public func removeFromDaytimePlans(_ values: NSSet)
 
 }
 

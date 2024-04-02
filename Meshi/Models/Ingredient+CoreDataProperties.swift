@@ -2,7 +2,7 @@
 //  Ingredient+CoreDataProperties.swift
 //  Meshi
 //
-//  Created by Fredy Sanchez on 30/03/24.
+//  Created by Fredy Sanchez on 01/04/24.
 //
 //
 
@@ -16,8 +16,8 @@ extension Ingredient {
         return NSFetchRequest<Ingredient>(entityName: "Ingredient")
     }
 
-    @NSManaged public var id: UUID
-    @NSManaged public var name: String
+    @NSManaged public var id: UUID?
+    @NSManaged public var name: String?
     @NSManaged public var mealIngredients: NSSet?
 
 }

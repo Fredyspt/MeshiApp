@@ -1,5 +1,5 @@
 //
-//  Collection+CoreDataProperties.swift
+//  DaytimePlan+CoreDataProperties.swift
 //  Meshi
 //
 //  Created by Fredy Sanchez on 01/04/24.
@@ -10,21 +10,21 @@ import Foundation
 import CoreData
 
 
-extension Collection {
+extension DaytimePlan {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Collection> {
-        return NSFetchRequest<Collection>(entityName: "Collection")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<DaytimePlan> {
+        return NSFetchRequest<DaytimePlan>(entityName: "DaytimePlan")
     }
 
+    @NSManaged public var dayTime: String?
     @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var userDescription: String?
     @NSManaged public var meals: NSSet?
+    @NSManaged public var mealPlan: DayPlan?
 
 }
 
 // MARK: Generated accessors for meals
-extension Collection {
+extension DaytimePlan {
 
     @objc(addMealsObject:)
     @NSManaged public func addToMeals(_ value: Meal)
@@ -40,6 +40,6 @@ extension Collection {
 
 }
 
-extension Collection : Identifiable {
+extension DaytimePlan : Identifiable {
 
 }

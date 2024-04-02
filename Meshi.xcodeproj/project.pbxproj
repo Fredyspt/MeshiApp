@@ -12,17 +12,21 @@
 		481A0E7B2BB402FB0067F2E1 /* MealTimeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E7A2BB402FB0067F2E1 /* MealTimeSectionView.swift */; };
 		481A0E802BB774490067F2E1 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E7F2BB774490067F2E1 /* DesignSystem.swift */; };
 		481A0E852BB8DAF80067F2E1 /* Meshi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E832BB8DAF80067F2E1 /* Meshi.xcdatamodeld */; };
-		481A0E902BB8E48F0067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E862BB8E48F0067F2E1 /* MealIngredient+CoreDataClass.swift */; };
-		481A0E912BB8E48F0067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E872BB8E48F0067F2E1 /* MealIngredient+CoreDataProperties.swift */; };
-		481A0E922BB8E48F0067F2E1 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E882BB8E48F0067F2E1 /* Meal+CoreDataClass.swift */; };
-		481A0E932BB8E48F0067F2E1 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E892BB8E48F0067F2E1 /* Meal+CoreDataProperties.swift */; };
-		481A0E942BB8E48F0067F2E1 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8A2BB8E48F0067F2E1 /* Tag+CoreDataClass.swift */; };
-		481A0E952BB8E48F0067F2E1 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8B2BB8E48F0067F2E1 /* Tag+CoreDataProperties.swift */; };
-		481A0E962BB8E48F0067F2E1 /* Collection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8C2BB8E48F0067F2E1 /* Collection+CoreDataClass.swift */; };
-		481A0E972BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8D2BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift */; };
-		481A0E982BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8E2BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift */; };
-		481A0E992BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0E8F2BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift */; };
 		481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0ED62BB8EA300067F2E1 /* Persistence.swift */; };
+		481A0EFA2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EEC2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift */; };
+		481A0EFB2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EED2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift */; };
+		481A0EFC2BBBA2690067F2E1 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EEE2BBBA2690067F2E1 /* Tag+CoreDataClass.swift */; };
+		481A0EFD2BBBA2690067F2E1 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EEF2BBBA2690067F2E1 /* Tag+CoreDataProperties.swift */; };
+		481A0EFE2BBBA2690067F2E1 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF02BBBA2690067F2E1 /* Meal+CoreDataClass.swift */; };
+		481A0EFF2BBBA2690067F2E1 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF12BBBA2690067F2E1 /* Meal+CoreDataProperties.swift */; };
+		481A0F002BBBA2690067F2E1 /* Collection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */; };
+		481A0F012BBBA2690067F2E1 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */; };
+		481A0F022BBBA2690067F2E1 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF42BBBA2690067F2E1 /* Ingredient+CoreDataClass.swift */; };
+		481A0F032BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */; };
+		481A0F042BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */; };
+		481A0F052BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */; };
+		481A0F062BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */; };
+		481A0F072BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */; };
 		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
 		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
 		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
@@ -60,17 +64,21 @@
 		481A0E7A2BB402FB0067F2E1 /* MealTimeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeSectionView.swift; sourceTree = "<group>"; };
 		481A0E7F2BB774490067F2E1 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		481A0E842BB8DAF80067F2E1 /* Meshi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meshi.xcdatamodel; sourceTree = "<group>"; };
-		481A0E862BB8E48F0067F2E1 /* MealIngredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0E872BB8E48F0067F2E1 /* MealIngredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		481A0E882BB8E48F0067F2E1 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0E892BB8E48F0067F2E1 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		481A0E8A2BB8E48F0067F2E1 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0E8B2BB8E48F0067F2E1 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		481A0E8C2BB8E48F0067F2E1 /* Collection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0E8D2BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		481A0E8E2BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0E8F2BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		481A0ED62BB8EA300067F2E1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		481A0EEC2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaytimePlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EED2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaytimePlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EEE2BBBA2690067F2E1 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EEF2BBBA2690067F2E1 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF02BBBA2690067F2E1 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EF12BBBA2690067F2E1 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF42BBBA2690067F2E1 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
 		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,16 +134,20 @@
 		481A0E772BB401030067F2E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				481A0E862BB8E48F0067F2E1 /* MealIngredient+CoreDataClass.swift */,
-				481A0E872BB8E48F0067F2E1 /* MealIngredient+CoreDataProperties.swift */,
-				481A0E882BB8E48F0067F2E1 /* Meal+CoreDataClass.swift */,
-				481A0E892BB8E48F0067F2E1 /* Meal+CoreDataProperties.swift */,
-				481A0E8A2BB8E48F0067F2E1 /* Tag+CoreDataClass.swift */,
-				481A0E8B2BB8E48F0067F2E1 /* Tag+CoreDataProperties.swift */,
-				481A0E8C2BB8E48F0067F2E1 /* Collection+CoreDataClass.swift */,
-				481A0E8D2BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift */,
-				481A0E8E2BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift */,
-				481A0E8F2BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift */,
+				481A0EEC2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift */,
+				481A0EED2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift */,
+				481A0EEE2BBBA2690067F2E1 /* Tag+CoreDataClass.swift */,
+				481A0EEF2BBBA2690067F2E1 /* Tag+CoreDataProperties.swift */,
+				481A0EF02BBBA2690067F2E1 /* Meal+CoreDataClass.swift */,
+				481A0EF12BBBA2690067F2E1 /* Meal+CoreDataProperties.swift */,
+				481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */,
+				481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */,
+				481A0EF42BBBA2690067F2E1 /* Ingredient+CoreDataClass.swift */,
+				481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */,
+				481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */,
+				481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */,
+				481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */,
+				481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */,
 				481A0E782BB401B20067F2E1 /* MealTime.swift */,
 			);
 			path = Models;
@@ -354,21 +366,25 @@
 			files = (
 				481A0E852BB8DAF80067F2E1 /* Meshi.xcdatamodeld in Sources */,
 				481A0E802BB774490067F2E1 /* DesignSystem.swift in Sources */,
-				481A0E902BB8E48F0067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */,
-				481A0E912BB8E48F0067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */,
-				481A0E922BB8E48F0067F2E1 /* Meal+CoreDataClass.swift in Sources */,
-				481A0E932BB8E48F0067F2E1 /* Meal+CoreDataProperties.swift in Sources */,
-				481A0E942BB8E48F0067F2E1 /* Tag+CoreDataClass.swift in Sources */,
-				481A0E952BB8E48F0067F2E1 /* Tag+CoreDataProperties.swift in Sources */,
-				481A0E962BB8E48F0067F2E1 /* Collection+CoreDataClass.swift in Sources */,
-				481A0E972BB8E48F0067F2E1 /* Collection+CoreDataProperties.swift in Sources */,
-				481A0E982BB8E48F0067F2E1 /* Ingredient+CoreDataClass.swift in Sources */,
-				481A0E992BB8E48F0067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */,
 				482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */,
 				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
 				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,
 				481A0E762BB3F6E20067F2E1 /* MealView.swift in Sources */,
 				481A0E7B2BB402FB0067F2E1 /* MealTimeSectionView.swift in Sources */,
+				481A0EFA2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift in Sources */,
+				481A0EFB2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift in Sources */,
+				481A0EFC2BBBA2690067F2E1 /* Tag+CoreDataClass.swift in Sources */,
+				481A0EFD2BBBA2690067F2E1 /* Tag+CoreDataProperties.swift in Sources */,
+				481A0EFE2BBBA2690067F2E1 /* Meal+CoreDataClass.swift in Sources */,
+				481A0EFF2BBBA2690067F2E1 /* Meal+CoreDataProperties.swift in Sources */,
+				481A0F002BBBA2690067F2E1 /* Collection+CoreDataClass.swift in Sources */,
+				481A0F012BBBA2690067F2E1 /* Collection+CoreDataProperties.swift in Sources */,
+				481A0F022BBBA2690067F2E1 /* Ingredient+CoreDataClass.swift in Sources */,
+				481A0F032BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */,
+				481A0F042BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */,
+				481A0F052BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */,
+				481A0F062BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift in Sources */,
+				481A0F072BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */,
 				481A0E792BB401B20067F2E1 /* MealTime.swift in Sources */,
 				482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */,
 				481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */,
