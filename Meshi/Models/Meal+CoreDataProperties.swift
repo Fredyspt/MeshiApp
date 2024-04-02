@@ -9,9 +9,7 @@
 import Foundation
 import CoreData
 
-
 extension Meal {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Meal> {
         return NSFetchRequest<Meal>(entityName: "Meal")
     }
@@ -25,12 +23,23 @@ extension Meal {
     @NSManaged public var mealIngredients: NSSet?
     @NSManaged public var tags: NSSet?
     @NSManaged public var daytimePlans: NSSet?
-
+    
+    var unwrappedName: String {
+        name ?? "Unnamed Meal"
+    }
+    
+    static func example(mealName: String, context: NSManagedObjectContext) -> Meal {
+        let meal = Meal(context: context)
+        meal.id = UUID()
+        meal.name = mealName
+        meal.preparation = "No instructions"
+        
+        return meal
+    }
 }
 
 // MARK: Generated accessors for collections
 extension Meal {
-
     @objc(addCollectionsObject:)
     @NSManaged public func addToCollections(_ value: Collection)
 
@@ -47,7 +56,6 @@ extension Meal {
 
 // MARK: Generated accessors for mealIngredients
 extension Meal {
-
     @objc(addMealIngredientsObject:)
     @NSManaged public func addToMealIngredients(_ value: MealIngredient)
 
@@ -59,12 +67,10 @@ extension Meal {
 
     @objc(removeMealIngredients:)
     @NSManaged public func removeFromMealIngredients(_ values: NSSet)
-
 }
 
 // MARK: Generated accessors for tags
 extension Meal {
-
     @objc(addTagsObject:)
     @NSManaged public func addToTags(_ value: Tag)
 
@@ -81,7 +87,6 @@ extension Meal {
 
 // MARK: Generated accessors for daytimePlans
 extension Meal {
-
     @objc(addDaytimePlansObject:)
     @NSManaged public func addToDaytimePlans(_ value: DaytimePlan)
 
@@ -93,9 +98,6 @@ extension Meal {
 
     @objc(removeDaytimePlans:)
     @NSManaged public func removeFromDaytimePlans(_ values: NSSet)
-
 }
 
-extension Meal : Identifiable {
-
-}
+extension Meal : Identifiable { }

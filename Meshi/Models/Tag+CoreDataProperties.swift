@@ -9,9 +9,7 @@
 import Foundation
 import CoreData
 
-
 extension Tag {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Tag> {
         return NSFetchRequest<Tag>(entityName: "Tag")
     }
@@ -24,7 +22,6 @@ extension Tag {
 
 // MARK: Generated accessors for meals
 extension Tag {
-
     @objc(addMealsObject:)
     @NSManaged public func addToMeals(_ value: Meal)
 
@@ -36,9 +33,6 @@ extension Tag {
 
     @objc(removeMeals:)
     @NSManaged public func removeFromMeals(_ values: NSSet)
-
 }
 
-extension Tag : Identifiable {
-
-}
+extension Tag : Identifiable { }

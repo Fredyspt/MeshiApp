@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct MealTimeSectionView: View {
-    let mealTime: MealTime
-    let meals: [Meal]
+    let daytimePlan: DaytimePlan
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(mealTime.rawValue)
+            Text(daytimePlan.mealTime.rawValue)
                 .font(.Meshi.title2)
             
-            ForEach(meals) { meal in
-                MealView(title: meal.name)
+            ForEach(daytimePlan.unwrappedMeals) { meal in
+                MealView(title: meal.unwrappedName)
                     .padding(.bottom, 16)
             }
         }
     }
 }
 
-//#Preview {
-//    MealTimeSectionView(
-//        mealTime: .breakfast,
-//        meals: [.init(name: "Eggs")]
-//    )
-//}
+#Preview("MealTimeSectionView", traits: .sizeThatFitsLayout) {
+    let previewContainer = PersistenceController.preview.container
+    let exampleDaytimePlan = DaytimePlan.example(context: previewContainer.viewContext)
+    return MealTimeSectionView(daytimePlan: exampleDaytimePlan)
+}

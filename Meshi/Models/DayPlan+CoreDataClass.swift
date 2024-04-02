@@ -10,6 +10,4 @@ import Foundation
 import CoreData
 
 @objc(DayPlan)
-public class DayPlan: NSManagedObject {
-
-}
+public class DayPlan: NSManagedObject { }

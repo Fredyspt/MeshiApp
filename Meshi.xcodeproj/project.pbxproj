@@ -25,8 +25,8 @@
 		481A0F032BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */; };
 		481A0F042BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */; };
 		481A0F052BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */; };
-		481A0F062BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */; };
-		481A0F072BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */; };
+		481A0F102BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */; };
+		481A0F112BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */; };
 		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
 		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
 		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
@@ -77,8 +77,8 @@
 		481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealIngredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
 		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +134,8 @@
 		481A0E772BB401030067F2E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */,
+				481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */,
 				481A0EEC2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift */,
 				481A0EED2BBBA2690067F2E1 /* DaytimePlan+CoreDataProperties.swift */,
 				481A0EEE2BBBA2690067F2E1 /* Tag+CoreDataClass.swift */,
@@ -146,8 +148,6 @@
 				481A0EF52BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift */,
 				481A0EF62BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift */,
 				481A0EF72BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift */,
-				481A0EF82BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift */,
-				481A0EF92BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift */,
 				481A0E782BB401B20067F2E1 /* MealTime.swift */,
 			);
 			path = Models;
@@ -369,6 +369,8 @@
 				482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */,
 				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
 				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,
+				481A0F102BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift in Sources */,
+				481A0F112BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */,
 				481A0E762BB3F6E20067F2E1 /* MealView.swift in Sources */,
 				481A0E7B2BB402FB0067F2E1 /* MealTimeSectionView.swift in Sources */,
 				481A0EFA2BBBA2690067F2E1 /* DaytimePlan+CoreDataClass.swift in Sources */,
@@ -383,8 +385,6 @@
 				481A0F032BBBA2690067F2E1 /* Ingredient+CoreDataProperties.swift in Sources */,
 				481A0F042BBBA2690067F2E1 /* MealIngredient+CoreDataClass.swift in Sources */,
 				481A0F052BBBA2690067F2E1 /* MealIngredient+CoreDataProperties.swift in Sources */,
-				481A0F062BBBA2690067F2E1 /* DayPlan+CoreDataClass.swift in Sources */,
-				481A0F072BBBA2690067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */,
 				481A0E792BB401B20067F2E1 /* MealTime.swift in Sources */,
 				482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */,
 				481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */,

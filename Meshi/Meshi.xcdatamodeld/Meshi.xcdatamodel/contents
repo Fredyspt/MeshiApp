@@ -9,12 +9,12 @@
     <entity name="DayPlan" representedClassName="DayPlan" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="daytimePlan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="mealPlan" inverseEntity="DaytimePlan"/>
+        <relationship name="daytimePlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="mealPlan" inverseEntity="DaytimePlan"/>
     </entity>
     <entity name="DaytimePlan" representedClassName="DaytimePlan" syncable="YES">
         <attribute name="dayTime" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="mealPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="daytimePlan" inverseEntity="DayPlan"/>
+        <relationship name="mealPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="daytimePlans" inverseEntity="DayPlan"/>
         <relationship name="meals" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="daytimePlans" inverseEntity="Meal"/>
     </entity>
     <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">

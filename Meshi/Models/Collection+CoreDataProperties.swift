@@ -9,9 +9,7 @@
 import Foundation
 import CoreData
 
-
 extension Collection {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Collection> {
         return NSFetchRequest<Collection>(entityName: "Collection")
     }
@@ -20,12 +18,10 @@ extension Collection {
     @NSManaged public var name: String?
     @NSManaged public var userDescription: String?
     @NSManaged public var meals: NSSet?
-
 }
 
 // MARK: Generated accessors for meals
 extension Collection {
-
     @objc(addMealsObject:)
     @NSManaged public func addToMeals(_ value: Meal)
 
@@ -37,9 +33,6 @@ extension Collection {
 
     @objc(removeMeals:)
     @NSManaged public func removeFromMeals(_ values: NSSet)
-
 }
 
-extension Collection : Identifiable {
-
-}
+extension Collection : Identifiable { }

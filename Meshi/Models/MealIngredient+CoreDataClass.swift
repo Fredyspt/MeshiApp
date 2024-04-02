@@ -10,6 +10,4 @@ import Foundation
 import CoreData
 
 @objc(MealIngredient)
-public class MealIngredient: NSManagedObject {
-
-}
+public class MealIngredient: NSManagedObject { }

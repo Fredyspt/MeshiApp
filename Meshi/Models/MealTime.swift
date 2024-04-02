@@ -11,6 +11,7 @@ enum MealTime: String, CaseIterable, Identifiable {
     case breakfast = "Breakfast"
     case lunch = "Lunch"
     case dinner = "Dinner"
+    case otherMeals = "Other Meals"
     
     var id: Self {
         self

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @FetchRequest(sortDescriptors: [])
+    private var dayPlan: FetchedResults<DayPlan>
+    
     var today: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE dd"
@@ -30,13 +33,12 @@ struct HomeView: View {
                     .font(.Meshi.title)
                     .padding(.bottom, 16)
                 
-                ForEach(MealTime.allCases) { mealTime in
-                    MealTimeSectionView(
-                        mealTime: mealTime,
-                        meals: [
-//                            .init(name: "Eggs")
-                        ]
-                    )
+                if let dayPlan = dayPlan.first {
+                    ForEach(dayPlan.unwrappedDaytimePlans) { daytimePlan in
+                        MealTimeSectionView(daytimePlan: daytimePlan)
+                    }
+                } else {
+                    Text("No meals today!")
                 }
             }
             .padding(.horizontal)
@@ -46,4 +48,8 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environment(
+            \.managedObjectContext,
+             PersistenceController.preview.container.viewContext
+        )
 }
