@@ -8,40 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
-    @FetchRequest(sortDescriptors: [])
+    @FetchRequest(fetchRequest: DayPlan.todayFetchRequest())
     private var dayPlan: FetchedResults<DayPlan>
     
-    var today: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE dd"
-        
-        let today = Date()
-        return dateFormatter.string(from: today)
-    }
-    
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("My Meals")
-                        .font(.Meshi.largeTitle)
+        if let dayPlan = dayPlan.first {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("My Meals")
+                            .font(.Meshi.largeTitle)
+                        
+                        Spacer()
+                    }
                     
-                    Spacer()
-                }
-                
-                Text(today)
-                    .font(.Meshi.title)
-                    .padding(.bottom, 16)
-                
-                if let dayPlan = dayPlan.first {
+                    Text(dayPlan.displayDate)
+                        .font(.Meshi.title)
+                        .padding(.bottom, 16)
+                    
                     ForEach(dayPlan.unwrappedDaytimePlans) { daytimePlan in
                         MealTimeSectionView(daytimePlan: daytimePlan)
                     }
-                } else {
-                    Text("No meals today!")
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
+        } else {
+            Text("No meals!!")
         }
     }
 }
