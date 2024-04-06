@@ -52,8 +52,8 @@ struct PersistenceController {
         let dayPlan = DayPlan(context: context)
         dayPlan.id = UUID()
         let today = Date()
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-        dayPlan.date = tomorrow
+//        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+        dayPlan.date = today
         dayPlan.addToDaytimePlans(NSSet(array: daytimePlans))
         
         do {

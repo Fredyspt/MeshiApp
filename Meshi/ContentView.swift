@@ -7,23 +7,34 @@
 
 import SwiftUI
 
+enum Tab {
+    case home
+    case recipes
+    case calendar
+    case settings
+}
+
 struct ContentView: View {
+    @State private var selectedTab: Tab = .home
+    @State private var recipesNavigation: [RecipesNavigation] = []
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             HomeView()
                 .tabItem { Label("Home", systemImage: "house") }
+                .tag(Tab.home)
             
-            RecipesView()
+            RecipesView(path: $recipesNavigation)
                 .tabItem { Label("Recipes", systemImage: "fork.knife") }
-            
-            NewMealView()
-                .tabItem { Label("", systemImage: "plus.circle") }
+                .tag(Tab.recipes)
             
             CalendarView()
                 .tabItem { Label("Calendar", systemImage: "calendar") }
+                .tag(Tab.calendar)
             
             SettingsView()
                 .tabItem { Label("Settings", systemImage: "gear") }
+                .tag(Tab.settings)
         }
     }
 }

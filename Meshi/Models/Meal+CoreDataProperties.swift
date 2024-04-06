@@ -11,7 +11,9 @@ import CoreData
 
 extension Meal {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Meal> {
-        return NSFetchRequest<Meal>(entityName: "Meal")
+        let request = NSFetchRequest<Meal>(entityName: "Meal")
+        request.sortDescriptors = []
+        return request
     }
 
     @NSManaged public var id: UUID?
