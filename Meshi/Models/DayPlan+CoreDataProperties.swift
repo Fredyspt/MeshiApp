@@ -17,13 +17,13 @@ extension DayPlan {
     @NSManaged public var date: Date?
     
     /// Meal plans for each meal part of the day: Breakfast, Lunch and Dinner.
-    @NSManaged public var daytimePlans: NSSet?
+    @NSManaged public var mealPlans: NSSet?
     
     /// Meal plans for each meal part of the day: Breakfast, Lunch and Dinner (unwrapped).
-    var unwrappedDaytimePlans: [DaytimePlan] {
-        let daytimePlansSet = daytimePlans as? Set<DaytimePlan> ?? []
+    var unwrappedMealPlans: [MealPlan] {
+        let mealPlansSet = mealPlans as? Set<MealPlan> ?? []
         
-        return daytimePlansSet.sorted {
+        return mealPlansSet.sorted {
             $0.order < $1.order
         }
     }
@@ -41,19 +41,19 @@ extension DayPlan {
     }
 }
 
-// MARK: Generated accessors for daytimePlans
+// MARK: Generated accessors for mealPlans
 extension DayPlan {
-    @objc(addDaytimePlansObject:)
-    @NSManaged public func addToDaytimePlans(_ value: DaytimePlan)
+    @objc(addMealPlansObject:)
+    @NSManaged public func addToMealPlans(_ value: MealPlan)
 
-    @objc(removeDaytimePlansObject:)
-    @NSManaged public func removeFromDaytimePlans(_ value: DaytimePlan)
+    @objc(removeMealPlansObject:)
+    @NSManaged public func removeFromMealPlans(_ value: MealPlan)
 
-    @objc(addDaytimePlans:)
-    @NSManaged public func addToDaytimePlans(_ values: NSSet)
+    @objc(addMealPlans:)
+    @NSManaged public func addToMealPlans(_ values: NSSet)
 
-    @objc(removeDaytimePlans:)
-    @NSManaged public func removeFromDaytimePlans(_ values: NSSet)
+    @objc(removeMealPlans:)
+    @NSManaged public func removeFromMealPlans(_ values: NSSet)
 }
 
 extension DayPlan : Identifiable { }

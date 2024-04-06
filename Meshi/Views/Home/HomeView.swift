@@ -26,8 +26,8 @@ struct HomeView: View {
                         .font(.Meshi.title)
                         .padding(.bottom, 16)
                     
-                    ForEach(dayPlan.unwrappedDaytimePlans) { daytimePlan in
-                        MealTimeSectionView(daytimePlan: daytimePlan)
+                    ForEach(dayPlan.unwrappedMealPlans) { mealPlan in
+                        MealSectionView(mealPlan: mealPlan)
                     }
                 }
                 .padding(.horizontal)

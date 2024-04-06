@@ -22,9 +22,9 @@ struct PersistenceController {
             Recipe.example(name: "Mashed Potatoes", context: context)
         ]
         
-        let breakfastPlan = DaytimePlan(context: context)
+        let breakfastPlan = MealPlan(context: context)
         breakfastPlan.id = UUID()
-        breakfastPlan.dayTime = "Breakfast"
+        breakfastPlan.meal = "Breakfast"
         breakfastPlan.addToRecipes(NSSet(array: breakfastMeals))
         
         let lunchMeals = [
@@ -32,9 +32,9 @@ struct PersistenceController {
             Recipe.example(name: "Tacos", context: context)
         ]
         
-        let lunchPlan = DaytimePlan(context: context)
+        let lunchPlan = MealPlan(context: context)
         lunchPlan.id = UUID()
-        lunchPlan.dayTime = "Lunch"
+        lunchPlan.meal = "Lunch"
         lunchPlan.addToRecipes(NSSet(array: lunchMeals))
         
         let dinnerMeals = [
@@ -42,19 +42,19 @@ struct PersistenceController {
             Recipe.example(name: "Caesar Salad", context: context)
         ]
         
-        let dinnerPlan = DaytimePlan(context: context)
+        let dinnerPlan = MealPlan(context: context)
         dinnerPlan.id = UUID()
-        dinnerPlan.dayTime = "Dinner"
+        dinnerPlan.meal = "Dinner"
         dinnerPlan.addToRecipes(NSSet(array: dinnerMeals))
         
-        let daytimePlans = [breakfastPlan, lunchPlan, dinnerPlan]
+        let mealPlans = [breakfastPlan, lunchPlan, dinnerPlan]
         
         let dayPlan = DayPlan(context: context)
         dayPlan.id = UUID()
         let today = Date()
 //        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
         dayPlan.date = today
-        dayPlan.addToDaytimePlans(NSSet(array: daytimePlans))
+        dayPlan.addToMealPlans(NSSet(array: mealPlans))
         
         do {
             try context.save()

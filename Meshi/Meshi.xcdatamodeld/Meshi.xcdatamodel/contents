@@ -9,18 +9,18 @@
     <entity name="DayPlan" representedClassName="DayPlan" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="daytimePlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="mealPlan" inverseEntity="DaytimePlan"/>
-    </entity>
-    <entity name="DaytimePlan" representedClassName="DaytimePlan" syncable="YES">
-        <attribute name="dayTime" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="mealPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="daytimePlans" inverseEntity="DayPlan"/>
-        <relationship name="recipes" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="daytimePlans" inverseEntity="Recipe"/>
+        <relationship name="mealPlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealPlan" inverseName="dayPlan" inverseEntity="MealPlan"/>
     </entity>
     <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String" defaultValueString="Unnamed Ingredient"/>
         <relationship name="recipeIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeIngredient" inverseName="ingredient" inverseEntity="RecipeIngredient"/>
+    </entity>
+    <entity name="MealPlan" representedClassName="MealPlan" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="meal" optional="YES" attributeType="String"/>
+        <relationship name="dayPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="mealPlans" inverseEntity="DayPlan"/>
+        <relationship name="recipes" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="mealPlans" inverseEntity="Recipe"/>
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -29,7 +29,7 @@
         <attribute name="preparation" attributeType="String" defaultValueString=""/>
         <attribute name="timeToCook" optional="YES" attributeType="String"/>
         <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Collection" inverseName="recipes" inverseEntity="Collection"/>
-        <relationship name="daytimePlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaytimePlan" inverseName="recipes" inverseEntity="DaytimePlan"/>
+        <relationship name="mealPlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealPlan" inverseName="recipes" inverseEntity="MealPlan"/>
         <relationship name="recipeIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeIngredient" inverseName="recipe" inverseEntity="RecipeIngredient"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="recipes" inverseEntity="Tag"/>
     </entity>
