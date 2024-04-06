@@ -1,5 +1,5 @@
 //
-//  MealView.swift
+//  RecipeView.swift
 //  Meshi
 //
 //  Created by Fredy Sanchez on 26/03/24.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct MealView: View {
+struct RecipeView: View {
     let title: String
     let image: UIImage? = nil
     
@@ -41,5 +41,5 @@ struct MealView: View {
 }
 
 #Preview {
-    MealView(title: "Meal Name")
+    RecipeView(title: "Recipe Name")
 }

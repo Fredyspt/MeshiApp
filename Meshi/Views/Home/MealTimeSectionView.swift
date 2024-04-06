@@ -15,8 +15,8 @@ struct MealTimeSectionView: View {
             Text(daytimePlan.mealTime.rawValue)
                 .font(.Meshi.title2)
             
-            ForEach(daytimePlan.unwrappedMeals) { meal in
-                MealView(title: meal.unwrappedName)
+            ForEach(daytimePlan.unwrappedRecipes) { recipe in
+                RecipeView(title: recipe.unwrappedName)
                     .padding(.bottom, 16)
             }
         }

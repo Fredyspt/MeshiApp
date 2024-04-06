@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailsView: View {
-    let recipe: Meal
+    let recipe: Recipe
     
     var body: some View {
         Text("Child view: \(recipe.unwrappedName)")
@@ -18,7 +18,7 @@ struct RecipeDetailsView: View {
 #Preview {
     RecipeDetailsView(
         recipe: .example(
-            mealName: "Eggsy",
+            name: "Eggsy",
             context: PersistenceController.preview.container.viewContext
         )
     )

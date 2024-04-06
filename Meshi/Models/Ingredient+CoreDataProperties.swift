@@ -16,22 +16,22 @@ extension Ingredient {
 
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var mealIngredients: NSSet?
+    @NSManaged public var recipeIngredients: NSSet?
 }
 
-// MARK: Generated accessors for mealIngredients
+// MARK: Generated accessors for recipeIngredients
 extension Ingredient {
-    @objc(addMealIngredientsObject:)
-    @NSManaged public func addToMealIngredients(_ value: MealIngredient)
+    @objc(addRecipeIngredientsObject:)
+    @NSManaged public func addToRecipeIngredients(_ value: RecipeIngredient)
 
-    @objc(removeMealIngredientsObject:)
-    @NSManaged public func removeFromMealIngredients(_ value: MealIngredient)
+    @objc(removeRecipeIngredientsObject:)
+    @NSManaged public func removeFromRecipeIngredients(_ value: RecipeIngredient)
 
-    @objc(addMealIngredients:)
-    @NSManaged public func addToMealIngredients(_ values: NSSet)
+    @objc(addRecipeIngredients:)
+    @NSManaged public func addToRecipeIngredients(_ values: NSSet)
 
-    @objc(removeMealIngredients:)
-    @NSManaged public func removeFromMealIngredients(_ values: NSSet)
+    @objc(removeRecipeIngredients:)
+    @NSManaged public func removeFromRecipeIngredients(_ values: NSSet)
 }
 
 extension Ingredient : Identifiable { }

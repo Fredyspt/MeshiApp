@@ -16,23 +16,23 @@ extension Tag {
 
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var meals: NSSet?
+    @NSManaged public var recipes: NSSet?
 
 }
 
-// MARK: Generated accessors for meals
+// MARK: Generated accessors for recipes
 extension Tag {
-    @objc(addMealsObject:)
-    @NSManaged public func addToMeals(_ value: Meal)
+    @objc(addRecipesObject:)
+    @NSManaged public func addToRecipes(_ value: Recipe)
 
-    @objc(removeMealsObject:)
-    @NSManaged public func removeFromMeals(_ value: Meal)
+    @objc(removeRecipesObject:)
+    @NSManaged public func removeFromRecipes(_ value: Recipe)
 
-    @objc(addMeals:)
-    @NSManaged public func addToMeals(_ values: NSSet)
+    @objc(addRecipes:)
+    @NSManaged public func addToRecipes(_ values: NSSet)
 
-    @objc(removeMeals:)
-    @NSManaged public func removeFromMeals(_ values: NSSet)
+    @objc(removeRecipes:)
+    @NSManaged public func removeFromRecipes(_ values: NSSet)
 }
 
 extension Tag : Identifiable { }

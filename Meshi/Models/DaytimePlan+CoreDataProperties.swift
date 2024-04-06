@@ -16,7 +16,7 @@ extension DaytimePlan {
 
     @NSManaged public var dayTime: String?
     @NSManaged public var id: UUID?
-    @NSManaged public var meals: NSSet?
+    @NSManaged public var recipes: NSSet?
     @NSManaged public var mealPlan: DayPlan?
     
     var mealTime: MealTime {
@@ -36,8 +36,8 @@ extension DaytimePlan {
         }
     }
     
-    var unwrappedMeals: [Meal] {
-        let set = meals as? Set<Meal> ?? []
+    var unwrappedRecipes: [Recipe] {
+        let set = recipes as? Set<Recipe> ?? []
         return Array(set)
     }
     
@@ -45,28 +45,28 @@ extension DaytimePlan {
         let daytimePlan = DaytimePlan(context: context)
         daytimePlan.id = UUID()
         daytimePlan.dayTime = "Breakfast"
-        daytimePlan.meals = [
-            Meal.example(mealName: "Eggs", context: context),
-            Meal.example(mealName: "Mashed Potatoes", context: context)
+        daytimePlan.recipes = [
+            Recipe.example(name: "Eggs", context: context),
+            Recipe.example(name: "Mashed Potatoes", context: context)
         ]
         
         return daytimePlan
     }
 }
 
-// MARK: Generated accessors for meals
+// MARK: Generated accessors for recipes
 extension DaytimePlan {
-    @objc(addMealsObject:)
-    @NSManaged public func addToMeals(_ value: Meal)
+    @objc(addRecipesObject:)
+    @NSManaged public func addToRecipes(_ value: Recipe)
 
-    @objc(removeMealsObject:)
-    @NSManaged public func removeFromMeals(_ value: Meal)
+    @objc(removeRecipesObject:)
+    @NSManaged public func removeFromRecipes(_ value: Recipe)
 
-    @objc(addMeals:)
-    @NSManaged public func addToMeals(_ values: NSSet)
+    @objc(addRecipes:)
+    @NSManaged public func addToRecipes(_ values: NSSet)
 
-    @objc(removeMeals:)
-    @NSManaged public func removeFromMeals(_ values: NSSet)
+    @objc(removeRecipes:)
+    @NSManaged public func removeFromRecipes(_ values: NSSet)
 }
 
 extension DaytimePlan : Identifiable { }

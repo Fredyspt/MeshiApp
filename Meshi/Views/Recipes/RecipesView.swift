@@ -8,14 +8,14 @@
 import SwiftUI
 
 enum RecipesNavigation: Hashable {
-    case recipeDetails(Meal)
+    case recipeDetails(Recipe)
 }
 
 struct RecipesView: View {
     @Binding var path: [RecipesNavigation]
     
-    @FetchRequest(fetchRequest: Meal.fetchRequest())
-    private var recipes: FetchedResults<Meal>
+    @FetchRequest(fetchRequest: Recipe.fetchRequest())
+    private var recipes: FetchedResults<Recipe>
     
     var body: some View {
         NavigationStack(path: $path) {

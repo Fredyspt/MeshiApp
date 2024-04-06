@@ -18,34 +18,34 @@ struct PersistenceController {
         let context = controller.container.viewContext
         
         let breakfastMeals = [
-            Meal.example(mealName: "Eggs", context: context),
-            Meal.example(mealName: "Mashed Potatoes", context: context)
+            Recipe.example(name: "Eggs", context: context),
+            Recipe.example(name: "Mashed Potatoes", context: context)
         ]
         
         let breakfastPlan = DaytimePlan(context: context)
         breakfastPlan.id = UUID()
         breakfastPlan.dayTime = "Breakfast"
-        breakfastPlan.addToMeals(NSSet(array: breakfastMeals))
+        breakfastPlan.addToRecipes(NSSet(array: breakfastMeals))
         
         let lunchMeals = [
-            Meal.example(mealName: "Chicken Fajitas", context: context),
-            Meal.example(mealName: "Tacos", context: context)
+            Recipe.example(name: "Chicken Fajitas", context: context),
+            Recipe.example(name: "Tacos", context: context)
         ]
         
         let lunchPlan = DaytimePlan(context: context)
         lunchPlan.id = UUID()
         lunchPlan.dayTime = "Lunch"
-        lunchPlan.addToMeals(NSSet(array: lunchMeals))
+        lunchPlan.addToRecipes(NSSet(array: lunchMeals))
         
         let dinnerMeals = [
-            Meal.example(mealName: "Lasagne", context: context),
-            Meal.example(mealName: "Caesar Salad", context: context)
+            Recipe.example(name: "Lasagne", context: context),
+            Recipe.example(name: "Caesar Salad", context: context)
         ]
         
         let dinnerPlan = DaytimePlan(context: context)
         dinnerPlan.id = UUID()
         dinnerPlan.dayTime = "Dinner"
-        dinnerPlan.addToMeals(NSSet(array: dinnerMeals))
+        dinnerPlan.addToRecipes(NSSet(array: dinnerMeals))
         
         let daytimePlans = [breakfastPlan, lunchPlan, dinnerPlan]
         

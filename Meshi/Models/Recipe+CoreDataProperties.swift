@@ -1,5 +1,5 @@
 //
-//  Meal+CoreDataProperties.swift
+//  Recipe+CoreDataProperties.swift
 //  Meshi
 //
 //  Created by Fredy Sanchez on 01/04/24.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-extension Meal {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Meal> {
-        let request = NSFetchRequest<Meal>(entityName: "Meal")
+extension Recipe {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Recipe> {
+        let request = NSFetchRequest<Recipe>(entityName: "Recipe")
         request.sortDescriptors = []
         return request
     }
@@ -22,26 +22,26 @@ extension Meal {
     @NSManaged public var preparation: String?
     @NSManaged public var timeToCook: String?
     @NSManaged public var collections: NSSet?
-    @NSManaged public var mealIngredients: NSSet?
+    @NSManaged public var recipeIngredients: NSSet?
     @NSManaged public var tags: NSSet?
     @NSManaged public var daytimePlans: NSSet?
     
     var unwrappedName: String {
-        name ?? "Unnamed Meal"
+        name ?? "Unnamed Recipe"
     }
     
-    static func example(mealName: String, context: NSManagedObjectContext) -> Meal {
-        let meal = Meal(context: context)
-        meal.id = UUID()
-        meal.name = mealName
-        meal.preparation = "No instructions"
+    static func example(name: String, context: NSManagedObjectContext) -> Recipe {
+        let recipe = Recipe(context: context)
+        recipe.id = UUID()
+        recipe.name = name
+        recipe.preparation = "No instructions"
         
-        return meal
+        return recipe
     }
 }
 
 // MARK: Generated accessors for collections
-extension Meal {
+extension Recipe {
     @objc(addCollectionsObject:)
     @NSManaged public func addToCollections(_ value: Collection)
 
@@ -56,23 +56,23 @@ extension Meal {
 
 }
 
-// MARK: Generated accessors for mealIngredients
-extension Meal {
-    @objc(addMealIngredientsObject:)
-    @NSManaged public func addToMealIngredients(_ value: MealIngredient)
+// MARK: Generated accessors for recipeIngredients
+extension Recipe {
+    @objc(addRecipeIngredientsObject:)
+    @NSManaged public func addToRecipeIngredients(_ value: RecipeIngredient)
 
-    @objc(removeMealIngredientsObject:)
-    @NSManaged public func removeFromMealIngredients(_ value: MealIngredient)
+    @objc(removeRecipeIngredientsObject:)
+    @NSManaged public func removeFromRecipeIngredients(_ value: RecipeIngredient)
 
-    @objc(addMealIngredients:)
-    @NSManaged public func addToMealIngredients(_ values: NSSet)
+    @objc(addRecipeIngredients:)
+    @NSManaged public func addToRecipeIngredients(_ values: NSSet)
 
-    @objc(removeMealIngredients:)
-    @NSManaged public func removeFromMealIngredients(_ values: NSSet)
+    @objc(removeRecipeIngredients:)
+    @NSManaged public func removeFromRecipeIngredients(_ values: NSSet)
 }
 
 // MARK: Generated accessors for tags
-extension Meal {
+extension Recipe {
     @objc(addTagsObject:)
     @NSManaged public func addToTags(_ value: Tag)
 
@@ -88,7 +88,7 @@ extension Meal {
 }
 
 // MARK: Generated accessors for daytimePlans
-extension Meal {
+extension Recipe {
     @objc(addDaytimePlansObject:)
     @NSManaged public func addToDaytimePlans(_ value: DaytimePlan)
 
@@ -102,4 +102,4 @@ extension Meal {
     @NSManaged public func removeFromDaytimePlans(_ values: NSSet)
 }
 
-extension Meal : Identifiable { }
+extension Recipe : Identifiable { }
