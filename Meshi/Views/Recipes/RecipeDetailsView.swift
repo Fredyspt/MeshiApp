@@ -11,7 +11,7 @@ struct RecipeDetailsView: View {
     let recipe: Recipe
     
     var body: some View {
-        Text("Child view: \(recipe.unwrappedName)")
+        Text("Child view: \(recipe.debugDescription)")
     }
 }
 
