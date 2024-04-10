@@ -11,12 +11,19 @@ import CoreData
 
 extension Ingredient {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Ingredient> {
-        return NSFetchRequest<Ingredient>(entityName: "Ingredient")
+        let request = NSFetchRequest<Ingredient>(entityName: "Ingredient")
+        request.sortDescriptors = []
+        
+        return request
     }
 
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var recipeIngredients: NSSet?
+    
+    var unwrappedName: String {
+        name ?? "Unnamed Ingredient"
+    }
 }
 
 // MARK: Generated accessors for recipeIngredients
@@ -35,3 +42,13 @@ extension Ingredient {
 }
 
 extension Ingredient : Identifiable { }
+
+extension Ingredient {
+    static func example(name: String, context: NSManagedObjectContext) -> Ingredient {
+        let ingredient = Ingredient(context: context)
+        ingredient.id = UUID()
+        ingredient.name = name
+        
+        return ingredient
+    }
+}

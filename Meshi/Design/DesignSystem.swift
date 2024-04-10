@@ -35,7 +35,7 @@ extension Font {
         )
         
         static let normal = Font.system(
-            size: 16,
+            size: 18,
             weight: .light,
             design: .rounded
         )

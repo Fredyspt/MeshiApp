@@ -56,6 +56,18 @@ struct PersistenceController {
         dayPlan.date = today
         dayPlan.addToMealPlans(NSSet(array: mealPlans))
         
+        let ingredient1 = Ingredient(context: context)
+        ingredient1.id = UUID()
+        ingredient1.name = "Garlic"
+        
+        let ingredient2 = Ingredient(context: context)
+        ingredient2.id = UUID()
+        ingredient2.name = "Chicken"
+        
+        let ingredient3 = Ingredient(context: context)
+        ingredient3.id = UUID()
+        ingredient3.name = "Salt"
+        
         do {
             try context.save()
         } catch {

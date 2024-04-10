@@ -18,6 +18,7 @@ enum Tab {
 struct ContentView: View {
     @State private var selectedTab: Tab = .home
     @State private var recipesNavigation: [RecipesNavigation] = []
+    @State private var isPresentingModal: Bool = false
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -29,8 +30,7 @@ struct ContentView: View {
                 .tabItem { Label("Recipes", systemImage: "fork.knife") }
                 .tag(Tab.recipes)
             
-            // TODO: Make this a modal view
-            NewRecipeView()
+            Text("")
                 .tabItem { Image(systemName: "plus") }
                 .tag(Tab.new)
             
@@ -41,6 +41,15 @@ struct ContentView: View {
             SettingsView()
                 .tabItem { Label("Settings", systemImage: "gear") }
                 .tag(Tab.settings)
+        }
+        .onChange(of: selectedTab, { oldValue, newValue in
+            if newValue == .new {
+                isPresentingModal = true
+                selectedTab = oldValue
+            }
+        })
+        .fullScreenCover(isPresented: $isPresentingModal) {
+            NewRecipeView()
         }
     }
 }
