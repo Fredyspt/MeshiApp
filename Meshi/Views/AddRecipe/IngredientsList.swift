@@ -15,8 +15,9 @@ struct IngredientsList: View {
             ForEach(viewModel.selectedIngredients) { ingredient in
                 HStack {
                     // Quantity
-                    Text("Ingredient")
+                    Text(ingredient.ingredientName)
                 }
+                .listRowBackground(Color(.neutral100))
             }
             
             Button {
@@ -27,14 +28,22 @@ struct IngredientsList: View {
                     Text("Add Ingredients")
                 }
             }
+            .listRowBackground(Color(.neutral100))
         }
         .listStyle(.plain)
+        .background(Color(.neutral100))
         .sheet(isPresented: $viewModel.showIngredientPicker) {
-            IngredientPicker()
+            IngredientPicker { ingredients in
+                viewModel.addIngredients(ingredients)
+            }
         }
     }
 }
 
 #Preview {
     IngredientsList()
+        .environment(
+            \.managedObjectContext,
+             PersistenceController.preview.container.viewContext
+        )
 }

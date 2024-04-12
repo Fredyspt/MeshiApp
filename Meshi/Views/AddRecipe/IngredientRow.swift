@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct IngredientRow: View {    
-    let ingredient: IngredientViewModel
+    let ingredient: Ingredient
+    let isSelected: Bool
     
     var body: some View {
         HStack {
-            Text(ingredient.name)
+            Text(ingredient.unwrappedName)
                 .font(.Meshi.normal)
                 .foregroundStyle(Color(.neutral1000))
             
             
             Spacer()
             
-            if ingredient.isSelected {
+            if isSelected {
                 Image(systemName: "checkmark.circle.fill")
                     .resizable()
                     .scaledToFit()
@@ -35,11 +36,8 @@ struct IngredientRow: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    let ingredient = IngredientViewModel(
-        id: UUID(),
-        name: "Garlic",
-        isSelected: true
-    )
+    let previewContext = PersistenceController.preview.container.viewContext
+    let ingredient = Ingredient.example(name: "Garlic", context: previewContext)
     
-    return IngredientRow(ingredient: ingredient)
+    return IngredientRow(ingredient: ingredient, isSelected: true)
 }

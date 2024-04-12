@@ -21,6 +21,10 @@ extension Ingredient {
     @NSManaged public var name: String?
     @NSManaged public var recipeIngredients: NSSet?
     
+    var unwrappedId: UUID {
+        id ?? UUID()
+    }
+    
     var unwrappedName: String {
         name ?? "Unnamed Ingredient"
     }

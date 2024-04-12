@@ -18,6 +18,10 @@ extension RecipeIngredient {
     @NSManaged public var unit: String?
     @NSManaged public var ingredient: Ingredient?
     @NSManaged public var recipe: Recipe?
+    
+    var ingredientName: String {
+        ingredient?.unwrappedName ?? "No ingredient"
+    }
 }
 
 extension RecipeIngredient : Identifiable { }

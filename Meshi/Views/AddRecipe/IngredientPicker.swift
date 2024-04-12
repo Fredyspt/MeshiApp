@@ -11,21 +11,29 @@ struct IngredientPicker: View {
     @Environment(\.managedObjectContext) private var context
     @StateObject private var viewModel = IngredientPickerViewModel()
     
+    @FetchRequest(fetchRequest: Ingredient.fetchRequest())
+    private var ingredients: FetchedResults<Ingredient>
+    
+    let onCommit: (Set<Ingredient>) -> Void
+    
     var body: some View {
         VStack {
             List {
-                ForEach(viewModel.ingredients) { ingredient in
-                    IngredientRow(ingredient: ingredient)
-                        .onTapGesture {
-                            viewModel.toggleSelected(ingredient: ingredient)
+                ForEach(ingredients) { ingredient in
+                    IngredientRow(
+                        ingredient: ingredient,
+                        isSelected: viewModel.isSelected(ingredient)
+                    )
+                    .onTapGesture {
+                        viewModel.toggleSelected(ingredient: ingredient)
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button(role: .destructive) {
+                            viewModel.delete(ingredient, inContext: context)
+                        } label: {
+                            Label("Delete", systemImage: "trash")
                         }
-                        .swipeActions(edge: .trailing) {
-                            Button(role: .destructive) {
-                                viewModel.delete(ingredient, inContext: context)
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }
+                    }
                 }
                 
                 if viewModel.addNewIngredientRow {
@@ -39,8 +47,8 @@ struct IngredientPicker: View {
             addIngredientButton
         }
         .background(Color(.neutral100))
-        .onAppear {
-            viewModel.fetch(inContext: context)
+        .onDisappear {
+            onCommit(viewModel.selectedIngredients)
         }
     }
     
@@ -72,7 +80,7 @@ struct IngredientPicker: View {
 }
 
 #Preview {
-    IngredientPicker()
+    IngredientPicker(onCommit: { _ in })
         .environment(
             \.managedObjectContext,
              PersistenceController.preview.container.viewContext

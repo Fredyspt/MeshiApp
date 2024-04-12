@@ -10,4 +10,8 @@ import Foundation
 class IngredientListViewModel: ObservableObject {
     @Published var selectedIngredients: [RecipeIngredient] = []
     @Published var showIngredientPicker = false
+    
+    func addIngredients(_ ingredients: Set<Ingredient>) {
+        // batch insert
+    }
 }
