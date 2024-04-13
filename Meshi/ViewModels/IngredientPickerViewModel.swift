@@ -52,7 +52,7 @@ class IngredientPickerViewModel: NSObject, ObservableObject {
     private let fetchedResultsController: NSFetchedResultsController<Ingredient>
     
     //MARK: - Init
-    init(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+    init(context: NSManagedObjectContext) {
         self.context = context
         self.fetchedResultsController = NSFetchedResultsController(
             fetchRequest: Ingredient.fetchRequest(),

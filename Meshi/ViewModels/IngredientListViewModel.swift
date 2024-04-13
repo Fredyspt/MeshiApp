@@ -8,9 +8,23 @@
 import Foundation
 import CoreData
 
+
+/// View Model for IngredientsList section view in NewRecipeView
 class IngredientListViewModel: ObservableObject {
-    @Published var selectedIngredients: [RecipeIngredient] = []
-    @Published var showIngredientPicker = false
+    /// Dictionary that contains the ingredients-quantity pairs.
+    @Published var recipeIngredients: [IngredientViewModel: String] = [:]
+    
+    /// Array of ingredient-quantity pairs sorted alphabetically by the ingredient's name.
+    var sortedIngredients: [(key: IngredientViewModel, value: String)] {
+        recipeIngredients.sorted {
+            $0.key.name > $1.key.name
+        }
+    }
+    
+    /// A set containing just the ingredients.
+    var selectedIngredients: Set<IngredientViewModel> {
+        Set(recipeIngredients.map(\.key))
+    }
     
     private var context: NSManagedObjectContext
     
@@ -18,18 +32,13 @@ class IngredientListViewModel: ObservableObject {
         self.context = context
     }
     
-//    func addIngredients(_ ingredients: Set<Ingredient>) {
-//        selectedIngredients.removeAll()
-//        
-//        var tempArray = [RecipeIngredient]()
-//        for ingredient in ingredients {
-//            // Is there a more performant way of doing this? batch insert?
-//            // what about if the recipe is discarded?
-//            let recipeIngredient = RecipeIngredient(context: context)
-//            recipeIngredient.ingredient = ingredient
-//            tempArray.append(recipeIngredient)
-//        }
-//        
-//        selectedIngredients = tempArray
-//    }
+    /// Add selected ingredients for the recipe, with an initial quantity of 1.
+    /// - Parameter ingredients: ingredients to add.
+    func addIngredients(_ ingredients: Set<IngredientViewModel>) {
+        recipeIngredients.removeAll()
+        
+        for ingredient in ingredients {
+            recipeIngredients[ingredient] = "1"
+        }
+    }
 }

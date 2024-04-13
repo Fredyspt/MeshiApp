@@ -8,16 +8,9 @@
 import SwiftUI
 
 struct IngredientPicker: View {
-    @StateObject private var viewModel: IngredientPickerViewModel
-    let onCommit: ([IngredientViewModel]) -> Void
+    @ObservedObject var viewModel: IngredientPickerViewModel
     
-    init(
-        viewModel: IngredientPickerViewModel = IngredientPickerViewModel(),
-        onCommit: @escaping ([IngredientViewModel]) -> Void
-    ) {
-        self._viewModel = StateObject(wrappedValue: viewModel)
-        self.onCommit = onCommit
-    }
+    let onCommit: (Set<IngredientViewModel>) -> Void
 
     var body: some View {
         VStack {
@@ -51,7 +44,7 @@ struct IngredientPicker: View {
         }
         .background(Color(.neutral100))
         .onDisappear {
-            onCommit(Array(viewModel.selectedIngredients))
+            onCommit(viewModel.selectedIngredients)
         }
     }
     

@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct IngredientsList: View {
+    @Environment(\.managedObjectContext) private var context
     @StateObject private var viewModel = IngredientListViewModel()
+    @State private var showIngredientPicker = false
     
     var body: some View {
         List {
-            ForEach(viewModel.selectedIngredients) { ingredient in
+            ForEach(viewModel.sortedIngredients, id: \.key) { ingredient, quantity in
                 HStack {
-                    // Quantity
-                    Text(ingredient.ingredientName)
+                    Text(quantity)
+                    Text(ingredient.name)
                 }
                 .listRowBackground(Color(.neutral100))
             }
             
             Button {
-                viewModel.showIngredientPicker = true
+                showIngredientPicker = true
             } label: {
                 HStack {
                     Image(systemName: "plus")
@@ -32,10 +34,17 @@ struct IngredientsList: View {
         }
         .listStyle(.plain)
         .background(Color(.neutral100))
-        .sheet(isPresented: $viewModel.showIngredientPicker) {
-            IngredientPicker { ingredients in
-//                viewModel.addIngredients(ingredients)
-            }
+        .sheet(isPresented: $showIngredientPicker) {
+            makeIngredientPicker()
+        }
+    }
+    
+    private func makeIngredientPicker() -> some View {
+        let pickerViewModel = IngredientPickerViewModel(context: context)
+        pickerViewModel.selectedIngredients = viewModel.selectedIngredients
+        
+        return IngredientPicker(viewModel: pickerViewModel) { ingredients in
+            viewModel.addIngredients(ingredients)
         }
     }
 }
