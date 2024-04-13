@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct IngredientRow: View {    
-    let ingredient: Ingredient
+    let ingredient: IngredientViewModel
     let isSelected: Bool
     
     var body: some View {
         HStack {
-            Text(ingredient.unwrappedName)
+            Text(ingredient.name)
                 .font(.Meshi.normal)
                 .foregroundStyle(Color(.neutral1000))
             
@@ -36,8 +36,8 @@ struct IngredientRow: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    let previewContext = PersistenceController.preview.container.viewContext
-    let ingredient = Ingredient.example(name: "Garlic", context: previewContext)
-    
-    return IngredientRow(ingredient: ingredient, isSelected: true)
+    IngredientRow(
+        ingredient: IngredientViewModel.example(),
+        isSelected: true
+    )
 }

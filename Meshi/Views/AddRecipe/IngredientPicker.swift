@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct IngredientPicker: View {
-    @Environment(\.managedObjectContext) private var context
-    @StateObject private var viewModel = IngredientPickerViewModel()
+    @StateObject private var viewModel: IngredientPickerViewModel
+    let onCommit: ([IngredientViewModel]) -> Void
     
-    @FetchRequest(fetchRequest: Ingredient.fetchRequest())
-    private var ingredients: FetchedResults<Ingredient>
-    
-    let onCommit: (Set<Ingredient>) -> Void
-    
+    init(
+        viewModel: IngredientPickerViewModel = IngredientPickerViewModel(),
+        onCommit: @escaping ([IngredientViewModel]) -> Void
+    ) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        self.onCommit = onCommit
+    }
+
     var body: some View {
         VStack {
             List {
-                ForEach(ingredients) { ingredient in
+                ForEach(viewModel.ingredients) { ingredient in
                     IngredientRow(
                         ingredient: ingredient,
                         isSelected: viewModel.isSelected(ingredient)
@@ -29,7 +32,7 @@ struct IngredientPicker: View {
                     }
                     .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {
-                            viewModel.delete(ingredient, inContext: context)
+                            viewModel.delete(ingredient)
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
@@ -48,7 +51,7 @@ struct IngredientPicker: View {
         }
         .background(Color(.neutral100))
         .onDisappear {
-            onCommit(viewModel.selectedIngredients)
+            onCommit(Array(viewModel.selectedIngredients))
         }
     }
     
@@ -73,16 +76,15 @@ struct IngredientPicker: View {
             .listRowBackground(Color.neutral100)
             .onSubmit {
                 withAnimation {
-                    viewModel.saveNewIngredient(inContext: context)
+                    viewModel.saveNewIngredient()
                 }
             }
     }
 }
 
 #Preview {
-    IngredientPicker(onCommit: { _ in })
-        .environment(
-            \.managedObjectContext,
-             PersistenceController.preview.container.viewContext
-        )
+    let previewContainer = PersistenceController.preview.container
+    let viewModel = IngredientPickerViewModel(context: previewContainer.viewContext)
+    
+    return IngredientPicker(viewModel: viewModel, onCommit: { _ in })
 }

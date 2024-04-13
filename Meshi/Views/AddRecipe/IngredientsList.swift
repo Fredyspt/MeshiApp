@@ -34,7 +34,7 @@ struct IngredientsList: View {
         .background(Color(.neutral100))
         .sheet(isPresented: $viewModel.showIngredientPicker) {
             IngredientPicker { ingredients in
-                viewModel.addIngredients(ingredients)
+//                viewModel.addIngredients(ingredients)
             }
         }
     }
