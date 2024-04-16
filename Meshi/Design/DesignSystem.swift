@@ -10,6 +10,8 @@ import SwiftUI
 
 extension Font {
     struct Meshi {
+        private static let baseSize: CGFloat = 16
+        
         static let largeTitle = Font.system(
             .largeTitle,
             design: .rounded,
@@ -17,25 +19,25 @@ extension Font {
         )
         
         static let title = Font.system(
-            size: 26,
+            size: baseSize * 2.5,
             weight: .semibold,
             design: .rounded
         )
         
         static let title2 = Font.system(
-            size: 24,
+            size: baseSize * 2.0,
             weight: .medium,
             design: .rounded
         )
         
         static let title3 = Font.system(
-            size: 20,
+            size: baseSize * 1.5,
             weight: .regular,
             design: .rounded
         )
         
         static let normal = Font.system(
-            size: 18,
+            size: baseSize,
             weight: .light,
             design: .rounded
         )
