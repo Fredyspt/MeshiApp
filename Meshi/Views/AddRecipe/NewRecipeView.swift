@@ -29,7 +29,7 @@ struct NewRecipeView: View {
                 
                 TextField("Recipe Name", text: $recipeName)
                     .multilineTextAlignment(.leading)
-                    .font(.Meshi.title)
+                    .font(.Meshi.title2)
                     .padding(.vertical, 10)
                 
                 Text("Ingredients")
@@ -45,9 +45,14 @@ struct NewRecipeView: View {
             }
             .padding(.horizontal)
         }
+        .background(Color(.neutral100))
     }
 }
 
 #Preview {
     NewRecipeView()
+        .environment(
+            \.managedObjectContext,
+             PersistenceController.preview.container.viewContext
+        )
 }

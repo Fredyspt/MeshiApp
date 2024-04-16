@@ -17,13 +17,13 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text("My Meals")
-                            .font(.Meshi.largeTitle)
+                            .font(.Meshi.title)
                         
                         Spacer()
                     }
                     
                     Text(dayPlan.displayDate)
-                        .font(.Meshi.title)
+                        .font(.Meshi.title2)
                         .padding(.bottom, 16)
                     
                     ForEach(dayPlan.unwrappedMealPlans) { mealPlan in
