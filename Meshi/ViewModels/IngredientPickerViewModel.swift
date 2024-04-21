@@ -13,8 +13,8 @@ struct IngredientViewModel: Identifiable, Hashable {
     let name: String
     
     init(ingredient: Ingredient) {
-        self.id = ingredient.unwrappedId
-        self.name = ingredient.unwrappedName
+        self.id = ingredient.id
+        self.name = ingredient.name
     }
     
     init(id: UUID, name: String) {

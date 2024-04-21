@@ -16,7 +16,7 @@ public class RecipeIngredient: NSManagedObject, Identifiable {
     @NSManaged public var recipe: Recipe
     
     var ingredientName: String {
-        ingredient.unwrappedName
+        ingredient.name
     }
 }
 
