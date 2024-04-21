@@ -1,5 +1,5 @@
 //
-//  DayPlan+CoreDataProperties.swift
+//  DayPlan.swift
 //  Meshi
 //
 //  Created by Fredy Sanchez on 01/04/24.
@@ -9,27 +9,22 @@
 import Foundation
 import CoreData
 
-extension DayPlan {
+@objc(DayPlan)
+public class DayPlan: NSManagedObject, Identifiable {
     /// The id of the day's meal plan
-    @NSManaged public var id: UUID?
+    @NSManaged public var id: UUID
     
     /// The date of the day's plan
-    @NSManaged public var date: Date?
+    @NSManaged public var date: Date
     
     /// Meal plans for each meal part of the day: Breakfast, Lunch and Dinner.
-    @NSManaged public var mealPlans: NSSet?
+    @NSManaged public var mealPlans: Set<MealPlan>
     
     /// Meal plans for each meal part of the day: Breakfast, Lunch and Dinner (unwrapped).
     var unwrappedMealPlans: [MealPlan] {
-        let mealPlansSet = mealPlans as? Set<MealPlan> ?? []
-        
-        return mealPlansSet.sorted {
+        return mealPlans.sorted {
             $0.order < $1.order
         }
-    }
-    /// The date of the day's plan (unwrapped)
-    var unwrappedDate: Date {
-        date ?? Date()
     }
     
     /// Date for display formatted as "Weekday Day"
@@ -37,28 +32,10 @@ extension DayPlan {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE d"
         
-        return dateFormatter.string(from: unwrappedDate)
+        return dateFormatter.string(from: date)
     }
 }
 
-// MARK: Generated accessors for mealPlans
-extension DayPlan {
-    @objc(addMealPlansObject:)
-    @NSManaged public func addToMealPlans(_ value: MealPlan)
-
-    @objc(removeMealPlansObject:)
-    @NSManaged public func removeFromMealPlans(_ value: MealPlan)
-
-    @objc(addMealPlans:)
-    @NSManaged public func addToMealPlans(_ values: NSSet)
-
-    @objc(removeMealPlans:)
-    @NSManaged public func removeFromMealPlans(_ values: NSSet)
-}
-
-extension DayPlan : Identifiable { }
-
-// MARK: Fetch Requests
 extension DayPlan {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DayPlan> {
         return NSFetchRequest<DayPlan>(entityName: "DayPlan")

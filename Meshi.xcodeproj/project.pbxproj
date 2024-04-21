@@ -21,8 +21,7 @@
 		481A0F012BBBA2690067F2E1 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */; };
 		481A0F022BBBA2690067F2E1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF42BBBA2690067F2E1 /* Ingredient.swift */; };
 		481A0F042BBBA2690067F2E1 /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF62BBBA2690067F2E1 /* RecipeIngredient.swift */; };
-		481A0F102BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */; };
-		481A0F112BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */; };
+		481A0F102BBBDFFA0067F2E1 /* DayPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F0E2BBBDFFA0067F2E1 /* DayPlan.swift */; };
 		481A0F142BBFD3A10067F2E1 /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F132BBFD3A10067F2E1 /* RecipeDetailsView.swift */; };
 		481A0F172BC369140067F2E1 /* IngredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F162BC369140067F2E1 /* IngredientsList.swift */; };
 		481A0F192BC3694F0067F2E1 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F182BC3694F0067F2E1 /* RecipeImage.swift */; };
@@ -79,8 +78,7 @@
 		481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		481A0EF42BBBA2690067F2E1 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		481A0EF62BBBA2690067F2E1 /* RecipeIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
-		481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0F0E2BBBDFFA0067F2E1 /* DayPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPlan.swift; sourceTree = "<group>"; };
 		481A0F132BBFD3A10067F2E1 /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
 		481A0F162BC369140067F2E1 /* IngredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsList.swift; sourceTree = "<group>"; };
 		481A0F182BC3694F0067F2E1 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
@@ -146,8 +144,7 @@
 		481A0E772BB401030067F2E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				481A0F0E2BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift */,
-				481A0F0F2BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift */,
+				481A0F0E2BBBDFFA0067F2E1 /* DayPlan.swift */,
 				481A0EEC2BBBA2690067F2E1 /* MealPlan.swift */,
 				481A0EEE2BBBA2690067F2E1 /* Tag.swift */,
 				481A0EF02BBBA2690067F2E1 /* Recipe+CoreDataClass.swift */,
@@ -437,8 +434,7 @@
 				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
 				481A0F242BCE45AD0067F2E1 /* SelfContainedTextField.swift in Sources */,
 				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,
-				481A0F102BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift in Sources */,
-				481A0F112BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */,
+				481A0F102BBBDFFA0067F2E1 /* DayPlan.swift in Sources */,
 				481A0E762BB3F6E20067F2E1 /* RecipeView.swift in Sources */,
 				481A0E7B2BB402FB0067F2E1 /* MealSectionView.swift in Sources */,
 				481A0EFA2BBBA2690067F2E1 /* MealPlan.swift in Sources */,
