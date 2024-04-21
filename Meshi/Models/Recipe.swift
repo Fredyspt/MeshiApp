@@ -16,7 +16,7 @@ public class Recipe: NSManagedObject, Identifiable {
     @NSManaged public var name: String
     @NSManaged public var preparation: String
     @NSManaged public var timeToCook: String?
-    @NSManaged public var collections: Set<Collection>
+    @NSManaged public var collections: Set<RecipeCollection>
     @NSManaged public var recipeIngredients: Set<RecipeIngredient>
     @NSManaged public var tags: Set<Tag>
     @NSManaged public var mealPlans: Set<MealPlan>

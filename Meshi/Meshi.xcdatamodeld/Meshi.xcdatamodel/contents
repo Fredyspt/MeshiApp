@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Collection" representedClassName="Collection" syncable="YES">
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" attributeType="String" defaultValueString="Unnamed Collection"/>
-        <attribute name="userDescription" optional="YES" attributeType="String"/>
-        <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="collections" inverseEntity="Recipe"/>
-    </entity>
     <entity name="DayPlan" representedClassName="DayPlan" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -28,10 +22,16 @@
         <attribute name="name" attributeType="String" defaultValueString="Unnamed Meal"/>
         <attribute name="preparation" attributeType="String" defaultValueString=""/>
         <attribute name="timeToCook" optional="YES" attributeType="String"/>
-        <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Collection" inverseName="recipes" inverseEntity="Collection"/>
+        <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeCollection" inverseName="recipes" inverseEntity="RecipeCollection"/>
         <relationship name="mealPlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealPlan" inverseName="recipes" inverseEntity="MealPlan"/>
         <relationship name="recipeIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeIngredient" inverseName="recipe" inverseEntity="RecipeIngredient"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="recipes" inverseEntity="Tag"/>
+    </entity>
+    <entity name="RecipeCollection" representedClassName="RecipeCollection" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String" defaultValueString="Unnamed Collection"/>
+        <attribute name="userDescription" optional="YES" attributeType="String"/>
+        <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="collections" inverseEntity="Recipe"/>
     </entity>
     <entity name="RecipeIngredient" representedClassName="RecipeIngredient" syncable="YES">
         <attribute name="quantity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
