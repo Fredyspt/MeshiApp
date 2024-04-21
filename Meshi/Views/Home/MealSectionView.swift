@@ -15,7 +15,7 @@ struct MealSectionView: View {
             Text(mealPlan.unwrappedMeal.rawValue)
                 .font(.Meshi.title2)
             
-            ForEach(mealPlan.unwrappedRecipes) { recipe in
+            ForEach(Array(mealPlan.recipes)) { recipe in
                 RecipeView(title: recipe.unwrappedName)
                     .padding(.bottom, 16)
             }

@@ -25,7 +25,7 @@ struct PersistenceController {
         let breakfastPlan = MealPlan(context: context)
         breakfastPlan.id = UUID()
         breakfastPlan.meal = "Breakfast"
-        breakfastPlan.addToRecipes(NSSet(array: breakfastMeals))
+        breakfastPlan.recipes = Set(breakfastMeals)
         
         let lunchMeals = [
             Recipe.example(name: "Chicken Fajitas", context: context),
@@ -35,7 +35,7 @@ struct PersistenceController {
         let lunchPlan = MealPlan(context: context)
         lunchPlan.id = UUID()
         lunchPlan.meal = "Lunch"
-        lunchPlan.addToRecipes(NSSet(array: lunchMeals))
+        lunchPlan.recipes = Set(lunchMeals)
         
         let dinnerMeals = [
             Recipe.example(name: "Lasagne", context: context),
@@ -45,7 +45,7 @@ struct PersistenceController {
         let dinnerPlan = MealPlan(context: context)
         dinnerPlan.id = UUID()
         dinnerPlan.meal = "Dinner"
-        dinnerPlan.addToRecipes(NSSet(array: dinnerMeals))
+        dinnerPlan.recipes = Set(dinnerMeals)
         
         let mealPlans = [breakfastPlan, lunchPlan, dinnerPlan]
         
