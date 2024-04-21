@@ -13,6 +13,8 @@ import CoreData
 class IngredientListViewModel: ObservableObject {
     /// Dictionary that contains the ingredients-quantity pairs.
     @Published var recipeIngredients: [IngredientViewModel: String] = [:]
+    // TODO: remove optional. Take context from persistenceController
+    var context: NSManagedObjectContext?
     
     /// Array of ingredient-quantity pairs sorted alphabetically by the ingredient's name.
     var sortedIngredients: [(key: IngredientViewModel, value: String)] {
@@ -26,12 +28,6 @@ class IngredientListViewModel: ObservableObject {
         Set(recipeIngredients.map(\.key))
     }
     
-    private var context: NSManagedObjectContext
-    
-    init(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
-        self.context = context
-    }
-    
     /// Add selected ingredients for the recipe, with an initial quantity of 1.
     /// - Parameter ingredients: ingredients to add.
     func addIngredients(_ ingredients: Set<IngredientViewModel>) {
@@ -40,5 +36,13 @@ class IngredientListViewModel: ObservableObject {
         for ingredient in ingredients {
             recipeIngredients[ingredient] = "1"
         }
+    }
+    
+    func updateAmount(for ingredient: IngredientViewModel, to newAmount: String) {
+//        guard let ingredient = recipe.ingredients.first(where: { $0.ingredientName == ingredient.name}) else {
+//            return
+//        }
+//        
+//        ingredient.amount = newAmount
     }
 }

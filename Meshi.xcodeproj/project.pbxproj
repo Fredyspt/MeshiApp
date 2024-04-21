@@ -34,6 +34,7 @@
 		481A0F1E2BC3B44F0067F2E1 /* IngredientPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F1D2BC3B44F0067F2E1 /* IngredientPicker.swift */; };
 		481A0F202BC3B8740067F2E1 /* IngredientPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F1F2BC3B8740067F2E1 /* IngredientPickerViewModel.swift */; };
 		481A0F222BC5091E0067F2E1 /* IngredientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F212BC5091E0067F2E1 /* IngredientRow.swift */; };
+		481A0F242BCE45AD0067F2E1 /* SelfContainedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0F232BCE45AD0067F2E1 /* SelfContainedTextField.swift */; };
 		4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */; };
 		482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827377F2BB0E8AB00CD00CF /* ContentView.swift */; };
 		482737822BB0E8AC00CD00CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482737812BB0E8AC00CD00CF /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		482737B12BB0EA4800CD00CF /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B02BB0EA4800CD00CF /* NewRecipeView.swift */; };
 		482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B22BB0EA5A00CD00CF /* CalendarView.swift */; };
 		482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482737B42BB0EA6400CD00CF /* SettingsView.swift */; };
+		48E0DDFE2BD23927002FB7F9 /* NewRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E0DDFD2BD23927002FB7F9 /* NewRecipeViewModel.swift */; };
+		48E0DE022BD4BB9F002FB7F9 /* Environment+PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E0DE012BD4BB9F002FB7F9 /* Environment+PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,7 @@
 		481A0F1D2BC3B44F0067F2E1 /* IngredientPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientPicker.swift; sourceTree = "<group>"; };
 		481A0F1F2BC3B8740067F2E1 /* IngredientPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientPickerViewModel.swift; sourceTree = "<group>"; };
 		481A0F212BC5091E0067F2E1 /* IngredientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRow.swift; sourceTree = "<group>"; };
+		481A0F232BCE45AD0067F2E1 /* SelfContainedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfContainedTextField.swift; sourceTree = "<group>"; };
 		4827377A2BB0E8AB00CD00CF /* Meshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4827377D2BB0E8AB00CD00CF /* MeshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshiApp.swift; sourceTree = "<group>"; };
 		4827377F2BB0E8AB00CD00CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		482737B02BB0EA4800CD00CF /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		482737B22BB0EA5A00CD00CF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		482737B42BB0EA6400CD00CF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		48E0DDFD2BD23927002FB7F9 /* NewRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewModel.swift; sourceTree = "<group>"; };
+		48E0DE012BD4BB9F002FB7F9 /* Environment+PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+PersistenceController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +207,17 @@
 			children = (
 				481A0F1B2BC3B2E60067F2E1 /* IngredientListViewModel.swift */,
 				481A0F1F2BC3B8740067F2E1 /* IngredientPickerViewModel.swift */,
+				48E0DDFD2BD23927002FB7F9 /* NewRecipeViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		481A0F252BCE478A0067F2E1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				481A0F232BCE45AD0067F2E1 /* SelfContainedTextField.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		482737712BB0E8AB00CD00CF = {
@@ -228,6 +243,7 @@
 		4827377C2BB0E8AB00CD00CF /* Meshi */ = {
 			isa = PBXGroup;
 			children = (
+				48E0DDFF2BD4BAD0002FB7F9 /* Common */,
 				481A0E7E2BB7742F0067F2E1 /* Design */,
 				481A0E772BB401030067F2E1 /* Models */,
 				481A0F1A2BC3B2AB0067F2E1 /* ViewModels */,
@@ -270,6 +286,7 @@
 		482737A72BB0E9D700CD00CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				481A0F252BCE478A0067F2E1 /* Shared */,
 				481A0F152BC368C10067F2E1 /* AddRecipe */,
 				481A0F122BBFC1FB0067F2E1 /* Recipes */,
 				481A0E742BB3F4490067F2E1 /* Home */,
@@ -277,6 +294,22 @@
 				482737B42BB0EA6400CD00CF /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		48E0DDFF2BD4BAD0002FB7F9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				48E0DE002BD4BB8B002FB7F9 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		48E0DE002BD4BB8B002FB7F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				48E0DE012BD4BB9F002FB7F9 /* Environment+PersistenceController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +447,7 @@
 				481A0E802BB774490067F2E1 /* DesignSystem.swift in Sources */,
 				482737B52BB0EA6400CD00CF /* SettingsView.swift in Sources */,
 				482737AD2BB0EA2400CD00CF /* HomeView.swift in Sources */,
+				481A0F242BCE45AD0067F2E1 /* SelfContainedTextField.swift in Sources */,
 				482737802BB0E8AB00CD00CF /* ContentView.swift in Sources */,
 				481A0F102BBBDFFA0067F2E1 /* DayPlan+CoreDataClass.swift in Sources */,
 				481A0F112BBBDFFA0067F2E1 /* DayPlan+CoreDataProperties.swift in Sources */,
@@ -437,8 +471,10 @@
 				481A0F222BC5091E0067F2E1 /* IngredientRow.swift in Sources */,
 				481A0F1E2BC3B44F0067F2E1 /* IngredientPicker.swift in Sources */,
 				481A0E792BB401B20067F2E1 /* Meal.swift in Sources */,
+				48E0DDFE2BD23927002FB7F9 /* NewRecipeViewModel.swift in Sources */,
 				482737B32BB0EA5A00CD00CF /* CalendarView.swift in Sources */,
 				481A0F142BBFD3A10067F2E1 /* RecipeDetailsView.swift in Sources */,
+				48E0DE022BD4BB9F002FB7F9 /* Environment+PersistenceController.swift in Sources */,
 				481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */,
 				4827377E2BB0E8AB00CD00CF /* MeshiApp.swift in Sources */,
 				482737B12BB0EA4800CD00CF /* NewRecipeView.swift in Sources */,

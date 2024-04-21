@@ -16,6 +16,8 @@ enum Tab {
 }
 
 struct ContentView: View {
+    @Environment(\.persistenceController) private var persistenceController
+    
     @State private var selectedTab: Tab = .home
     @State private var recipesNavigation: [RecipesNavigation] = []
     @State private var isPresentingModal: Bool = false
@@ -49,15 +51,15 @@ struct ContentView: View {
             }
         })
         .fullScreenCover(isPresented: $isPresentingModal) {
-            NewRecipeView()
+            NewRecipeView(persistenceController: persistenceController)
         }
     }
 }
 
 #Preview {
-    ContentView()
-        .environment(
-            \.managedObjectContext,
-             PersistenceController.preview.container.viewContext
-        )
+    let persistenceController = PersistenceController.preview
+    
+    return ContentView()
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        .environment(\.persistenceController, persistenceController)
 }

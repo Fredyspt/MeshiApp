@@ -16,6 +16,7 @@ struct MeshiApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.persistenceController, persistenceController)
         }
         .onChange(of: scenePhase) {
             persistenceController.save()

@@ -13,13 +13,22 @@ struct IngredientsList: View {
     @State private var showIngredientPicker = false
     
     var body: some View {
-        List {
-            ForEach(viewModel.sortedIngredients, id: \.key) { ingredient, quantity in
+        VStack(alignment: .leading, spacing: 18) {
+            ForEach(viewModel.sortedIngredients, id: \.key) { ingredient, amount in
                 HStack {
-                    Text(quantity)
+                    SelfContainedTextField(initialValue: amount) { newAmount in
+                        viewModel.updateAmount(for: ingredient, to: newAmount)
+                    }
+                    .frame(maxWidth: 100, minHeight: 30)
+                    .multilineTextAlignment(.center)
+                    
                     Text(ingredient.name)
+                        .font(.Meshi.normal)
+                        .foregroundStyle(.neutral1000)
                 }
-                .listRowBackground(Color(.neutral100))
+                .background(Color(.neutral100))
+                
+                Divider()
             }
             
             Button {
@@ -28,17 +37,28 @@ struct IngredientsList: View {
                 HStack {
                     Image(systemName: "plus")
                     Text("Add Ingredients")
+                        .font(.Meshi.normal)
                 }
+                .foregroundStyle(.neutral1000)
             }
-            .listRowBackground(Color(.neutral100))
+            .background(Color(.neutral100))
         }
-        .listStyle(.plain)
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .topLeading
+        )
+        .padding(.vertical)
         .background(Color(.neutral100))
         .sheet(isPresented: $showIngredientPicker) {
             makeIngredientPicker()
         }
+        .onAppear {
+            viewModel.context = context
+        }
     }
     
+    //MARK: - Subviews
     private func makeIngredientPicker() -> some View {
         let pickerViewModel = IngredientPickerViewModel(context: context)
         pickerViewModel.selectedIngredients = viewModel.selectedIngredients
@@ -49,7 +69,7 @@ struct IngredientsList: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     IngredientsList()
         .environment(
             \.managedObjectContext,

@@ -49,6 +49,7 @@ class IngredientPickerViewModel: NSObject, ObservableObject {
     
     //MARK: - Private Properties
     private let context: NSManagedObjectContext
+    // TODO: Revert to using @FetchRequest
     private let fetchedResultsController: NSFetchedResultsController<Ingredient>
     
     //MARK: - Init

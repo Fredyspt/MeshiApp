@@ -30,6 +30,10 @@ extension Recipe {
         name ?? "Unnamed Recipe"
     }
     
+    var ingredients: Set<RecipeIngredient> {
+        recipeIngredients as? Set<RecipeIngredient> ?? []
+    }
+    
     static func example(name: String, context: NSManagedObjectContext) -> Recipe {
         let recipe = Recipe(context: context)
         recipe.id = UUID()
