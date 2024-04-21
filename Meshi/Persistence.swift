@@ -98,6 +98,51 @@ struct PersistenceController {
         }
     }
     
+    
+    /// Create a new context that is a child of the ViewContext.
+    /// This context is useful when you need a scratchpad to
+    /// edit a managed object in a view. It runs on the main queue
+    /// so it safe to access from the main thread to provide real time
+    /// updates in the UI.
+    /// - Returns: managed context.
+    func childViewContext() -> NSManagedObjectContext {
+        let childContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        childContext.parent = container.viewContext
+        
+        return childContext
+    }
+    
+    /// Create a new temporary instance of the object in the given context.
+    /// - Parameter context: context to associate the object to.
+    /// - Returns: The temporary instance.
+    func newTemporaryInstance<T: NSManagedObject>(in context: NSManagedObjectContext) -> T {
+        T(context: context)
+    }
+    
+    /// Get a copy of the object accessible from the given context.
+    /// - Parameters:
+    ///   - object: Object to copy
+    ///   - context: Context to associate the object to.
+    /// - Returns: A copy of the object accessible from the given context.
+    func copyForEditing<T: NSManagedObject>(of object: T, in context: NSManagedObjectContext) -> T? {
+        return (try? context.existingObject(with: object.objectID)) as? T
+    }
+    
+    /// Save the object to the persistent store.
+    /// - Parameter object: Object to persist.
+    func persist(_ object: NSManagedObject) {
+        do {
+            try object.managedObjectContext?.save()
+            
+            if let parent = object.managedObjectContext?.parent {
+                try parent.save()
+            }
+        } catch {
+            // TODO: Show alert
+            print(error.localizedDescription)
+        }
+    }
+    
     func save() {
         let context = container.viewContext
         
