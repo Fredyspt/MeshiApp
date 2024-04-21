@@ -15,8 +15,7 @@
 		481A0ED72BB8EA300067F2E1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0ED62BB8EA300067F2E1 /* Persistence.swift */; };
 		481A0EFA2BBBA2690067F2E1 /* MealPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EEC2BBBA2690067F2E1 /* MealPlan.swift */; };
 		481A0EFC2BBBA2690067F2E1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EEE2BBBA2690067F2E1 /* Tag.swift */; };
-		481A0EFE2BBBA2690067F2E1 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF02BBBA2690067F2E1 /* Recipe+CoreDataClass.swift */; };
-		481A0EFF2BBBA2690067F2E1 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF12BBBA2690067F2E1 /* Recipe+CoreDataProperties.swift */; };
+		481A0EFE2BBBA2690067F2E1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF02BBBA2690067F2E1 /* Recipe.swift */; };
 		481A0F002BBBA2690067F2E1 /* Collection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */; };
 		481A0F012BBBA2690067F2E1 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */; };
 		481A0F022BBBA2690067F2E1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481A0EF42BBBA2690067F2E1 /* Ingredient.swift */; };
@@ -72,8 +71,7 @@
 		481A0ED62BB8EA300067F2E1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		481A0EEC2BBBA2690067F2E1 /* MealPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlan.swift; sourceTree = "<group>"; };
 		481A0EEE2BBBA2690067F2E1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		481A0EF02BBBA2690067F2E1 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
-		481A0EF12BBBA2690067F2E1 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		481A0EF02BBBA2690067F2E1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataClass.swift"; sourceTree = "<group>"; };
 		481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		481A0EF42BBBA2690067F2E1 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
@@ -147,8 +145,7 @@
 				481A0F0E2BBBDFFA0067F2E1 /* DayPlan.swift */,
 				481A0EEC2BBBA2690067F2E1 /* MealPlan.swift */,
 				481A0EEE2BBBA2690067F2E1 /* Tag.swift */,
-				481A0EF02BBBA2690067F2E1 /* Recipe+CoreDataClass.swift */,
-				481A0EF12BBBA2690067F2E1 /* Recipe+CoreDataProperties.swift */,
+				481A0EF02BBBA2690067F2E1 /* Recipe.swift */,
 				481A0EF22BBBA2690067F2E1 /* Collection+CoreDataClass.swift */,
 				481A0EF32BBBA2690067F2E1 /* Collection+CoreDataProperties.swift */,
 				481A0EF42BBBA2690067F2E1 /* Ingredient.swift */,
@@ -439,8 +436,7 @@
 				481A0E7B2BB402FB0067F2E1 /* MealSectionView.swift in Sources */,
 				481A0EFA2BBBA2690067F2E1 /* MealPlan.swift in Sources */,
 				481A0EFC2BBBA2690067F2E1 /* Tag.swift in Sources */,
-				481A0EFE2BBBA2690067F2E1 /* Recipe+CoreDataClass.swift in Sources */,
-				481A0EFF2BBBA2690067F2E1 /* Recipe+CoreDataProperties.swift in Sources */,
+				481A0EFE2BBBA2690067F2E1 /* Recipe.swift in Sources */,
 				481A0F002BBBA2690067F2E1 /* Collection+CoreDataClass.swift in Sources */,
 				481A0F012BBBA2690067F2E1 /* Collection+CoreDataProperties.swift in Sources */,
 				481A0F022BBBA2690067F2E1 /* Ingredient.swift in Sources */,

@@ -21,7 +21,7 @@ struct RecipesView: View {
         NavigationStack(path: $path) {
             List(recipes) { recipe in
                 NavigationLink(value: RecipesNavigation.recipeDetails(recipe)) {
-                    Text(recipe.unwrappedName)
+                    Text(recipe.name)
                 }
             }
             .navigationTitle("Recipes")
