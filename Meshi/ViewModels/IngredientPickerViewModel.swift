@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+// FIXME: Delete me!
 struct IngredientViewModel: Identifiable, Hashable {
     let id: UUID
     let name: String

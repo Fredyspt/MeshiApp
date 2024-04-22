@@ -35,7 +35,7 @@ struct NewRecipeView: View {
                     Text("Ingredients")
                         .font(.Meshi.title3)
                     
-                    IngredientsList()
+                    IngredientsList(viewModel: viewModel)
                     
                     Text("Preparation")
                         .font(.Meshi.title3)

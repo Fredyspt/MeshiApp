@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct IngredientsList: View {
+    @ObservedObject var viewModel: NewRecipeViewModel
+    
     @Environment(\.managedObjectContext) private var context
-    @StateObject private var viewModel = IngredientListViewModel()
     @State private var showIngredientPicker = false
     
     var body: some View {
@@ -53,9 +54,6 @@ struct IngredientsList: View {
         .sheet(isPresented: $showIngredientPicker) {
             makeIngredientPicker()
         }
-        .onAppear {
-            viewModel.context = context
-        }
     }
     
     //MARK: - Subviews
@@ -70,7 +68,9 @@ struct IngredientsList: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    IngredientsList()
+    let viewModel = NewRecipeViewModel(persistenceController: PersistenceController.preview)
+    
+    return IngredientsList(viewModel: viewModel)
         .environment(
             \.managedObjectContext,
              PersistenceController.preview.container.viewContext
