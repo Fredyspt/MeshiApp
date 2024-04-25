@@ -14,7 +14,7 @@ class NewRecipeViewModel: ObservableObject {
     @Published var preparation = ""
     
     /// Dictionary that contains the ingredients-quantity pairs.
-    @Published var recipeIngredients: [IngredientViewModel: String] = [:]
+    @Published var recipeIngredients: [Ingredient: String] = [:]
     
     //MARK: - Stored Properties
     private let recipe: Recipe
@@ -23,14 +23,14 @@ class NewRecipeViewModel: ObservableObject {
     
     //MARK: - Computed Properties
     /// Array of ingredient-quantity pairs sorted alphabetically by the ingredient's name.
-    var sortedIngredients: [(key: IngredientViewModel, value: String)] {
+    var sortedIngredients: [(key: Ingredient, value: String)] {
         recipeIngredients.sorted {
             $0.key.name > $1.key.name
         }
     }
     
     /// A set containing just the ingredients.
-    var selectedIngredients: Set<IngredientViewModel> {
+    var selectedIngredients: Set<Ingredient> {
         Set(recipeIngredients.map(\.key))
     }
     
@@ -45,7 +45,7 @@ class NewRecipeViewModel: ObservableObject {
     //MARK: - Methods
     /// Add selected ingredients for the recipe, with an initial quantity of 1.
     /// - Parameter ingredients: ingredients to add.
-    func addIngredients(_ ingredients: Set<IngredientViewModel>) {
+    func addIngredients(_ ingredients: Set<Ingredient>) {
         recipeIngredients.removeAll()
         
         for ingredient in ingredients {
@@ -54,7 +54,7 @@ class NewRecipeViewModel: ObservableObject {
     }
     
     // FIXME: Implement me!
-    func updateAmount(for ingredient: IngredientViewModel, to newAmount: String) {
+    func updateAmount(for ingredient: Ingredient, to newAmount: String) {
         
     }
 }

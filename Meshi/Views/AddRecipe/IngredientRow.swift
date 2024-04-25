@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IngredientRow: View {    
-    let ingredient: IngredientViewModel
+    let ingredient: Ingredient
     let isSelected: Bool
     
     var body: some View {
@@ -36,8 +36,14 @@ struct IngredientRow: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    IngredientRow(
-        ingredient: IngredientViewModel.example(),
+    let previewContext = PersistenceController.preview.container.viewContext
+    let ingredient = Ingredient.example(
+        name: "Garlic",
+        context: previewContext
+    )
+    
+    return IngredientRow(
+        ingredient: ingredient,
         isSelected: true
     )
 }

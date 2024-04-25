@@ -9,13 +9,15 @@ import SwiftUI
 
 struct IngredientPicker: View {
     @ObservedObject var viewModel: IngredientPickerViewModel
+    let onCommit: (Set<Ingredient>) -> Void
     
-    let onCommit: (Set<IngredientViewModel>) -> Void
+    @FetchRequest(fetchRequest: Ingredient.fetchRequest())
+    private var ingredients: FetchedResults<Ingredient>
 
     var body: some View {
         VStack {
             List {
-                ForEach(viewModel.ingredients) { ingredient in
+                ForEach(ingredients) { ingredient in
                     IngredientRow(
                         ingredient: ingredient,
                         isSelected: viewModel.isSelected(ingredient)
@@ -76,8 +78,12 @@ struct IngredientPicker: View {
 }
 
 #Preview {
-    let previewContainer = PersistenceController.preview.container
-    let viewModel = IngredientPickerViewModel(context: previewContainer.viewContext)
+    let persistenceController = PersistenceController.preview
+    let viewModel = IngredientPickerViewModel(persistenceController: persistenceController)
     
     return IngredientPicker(viewModel: viewModel, onCommit: { _ in })
+        .environment(
+            \.managedObjectContext,
+             persistenceController.container.viewContext
+        )
 }

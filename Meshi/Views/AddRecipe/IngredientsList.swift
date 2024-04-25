@@ -10,7 +10,7 @@ import SwiftUI
 struct IngredientsList: View {
     @ObservedObject var viewModel: NewRecipeViewModel
     
-    @Environment(\.managedObjectContext) private var context
+    @Environment(\.persistenceController) private var persistenceController
     @State private var showIngredientPicker = false
     
     var body: some View {
@@ -58,7 +58,7 @@ struct IngredientsList: View {
     
     //MARK: - Subviews
     private func makeIngredientPicker() -> some View {
-        let pickerViewModel = IngredientPickerViewModel(context: context)
+        let pickerViewModel = IngredientPickerViewModel(persistenceController: persistenceController)
         pickerViewModel.selectedIngredients = viewModel.selectedIngredients
         
         return IngredientPicker(viewModel: pickerViewModel) { ingredients in

@@ -71,7 +71,7 @@ struct PersistenceController {
         do {
             try context.save()
         } catch {
-            fatalError()
+            fatalError("Failed to save preview data!")
         }
         
         return controller
@@ -131,14 +131,22 @@ struct PersistenceController {
     /// Save the object to the persistent store.
     /// - Parameter object: Object to persist.
     func persist(_ object: NSManagedObject) {
+        guard let context = object.managedObjectContext else {
+            return
+        }
+        
+        save(context)
+    }
+    
+    func save(_ context: NSManagedObjectContext) {
         do {
-            try object.managedObjectContext?.save()
+            try context.save()
             
-            if let parent = object.managedObjectContext?.parent {
+            if let parent = context.parent {
                 try parent.save()
             }
         } catch {
-            // TODO: Show alert
+            context.rollback()
             print(error.localizedDescription)
         }
     }
@@ -150,7 +158,8 @@ struct PersistenceController {
             do {
                 try context.save()
             } catch {
-                // TODO: Show error
+                context.rollback()
+                print(error.localizedDescription)
             }
         }
     }
